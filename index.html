@@ -1,0 +1,646 @@
+<!-- Design system: Primary deep clinical teal-green #0F3D33 (structure, trust); Brand vivid green #2DB742 reserved ONLY for primary CTAs (most saturated element); neutrals #F6FAF7 / #FFFFFF / #1C2B22. Fonts: 'Fraunces' (warm characterful display — care + craft) + 'Mulish' (clean clinical body). Rationale: elevate Pies Saludables' real green brand into a calm, premium, trustworthy medical-wellness feel for Panama. -->
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pies Saludables PTY | Clínica #1 de Quiropedia en Panamá</title>
+<meta content="Pies Saludables PTY: clínica de quiropedia en San Francisco y Juan Díaz, Panamá. Tratamos uñas encarnadas, hongos, callos y pie diabético con total desinfección y esterilización por ozono. Agenda por WhatsApp." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Mulish:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --teal: #0F3D33;        /* primary structural brand */
+  --teal-d: #0D3428;
+  --green: #2DB742;       /* CTA accent — most saturated, CTAs only */
+  --green-d: #1F9B2F;
+  --ink: #1C2B22;
+  --mut: #0F3D33;
+  --bg: #F6FAF7;
+  --card: #FFFFFF;
+  --line: #E3ECE6;
+  --shadow:0 10px 40px rgba(15,61,51,.10);
+  --shadow-sm:0 4px 18px rgba(15,61,51,.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Mulish',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;line-height:1.12;font-weight:600;color:var(--teal)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 24px}
+.sec{padding:88px 0}
+.eyebrow{font-family:'Mulish';font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:var(--green-d)}
+
+/* ---------- Buttons / CTAs ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 28px;border-radius:10px;font-family:'Mulish';font-weight:800;font-size:1.02rem;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;border:none}
+.btn--cta{background:var(--green);color:#fff;box-shadow:0 8px 22px rgba(45,183,66,.34)}
+.btn--cta:hover,.btn--cta:focus{background:var(--green-d);transform:translateY(-2px);box-shadow:0 12px 28px rgba(45,183,66,.42);outline:none}
+.btn--ghost{background:transparent;color:var(--teal);border:2px solid var(--line)}
+.btn--ghost:hover,.btn--ghost:focus{border-color:var(--green);color:var(--green-d);transform:translateY(-2px);outline:none}
+.btn--lg{min-height:58px;padding:16px 34px;font-size:1.08rem}
+
+/* ---------- Header (STATIC) ---------- */
+.head{background:var(--bg);border-bottom:1px solid var(--line)}
+.head__in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 24px;max-width:1180px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:50px;width:auto}
+.brand__name{font-family:'Fraunces';font-weight:600;font-size:1.18rem;color:var(--teal);line-height:1.05}
+.brand__name span{display:block;font-family:'Mulish';font-weight:700;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-d)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-weight:700;font-size:.96rem;color:var(--ink);transition:color .15s}
+.nav a:hover,.nav a:focus{color:var(--green-d);outline:none}
+.head .btn{min-height:46px;padding:11px 22px}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
+.burger span{width:26px;height:3px;background:var(--teal);border-radius:3px;transition:.25s}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:linear-gradient(150deg,#0F3D33 0%,#13564A 100%);color:#fff;overflow:hidden}
+.hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;padding:84px 0}
+.hero h1{color:#fff;font-size:clamp(2.3rem,5vw,3.7rem);font-weight:700;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:#8FE6A0}
+.hero__sub{margin:22px 0 30px;font-size:1.18rem;color:#D9EBE4;max-width:30em}
+.hero__ces{display:flex;gap:14px;flex-wrap:wrap}
+.hero__trust{margin-top:30px;display:flex;gap:26px;flex-wrap:wrap;font-size:.94rem;color:#BFE0D5}
+.hero__trust b{color:#fff;font-family:'Fraunces';font-size:1.5rem;font-weight:600;display:block;line-height:1}
+.hero__media{position:relative}
+.hero__media img{border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.34);width:100%;height:460px;object-fit:cover}
+.hero__badge{position:absolute;left:-18px;bottom:26px;background:#fff;color:var(--teal);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow);max-width:230px}
+.hero__badge b{font-family:'Fraunces';font-size:1.05rem;color:var(--green-d);display:block}
+.hero__badge small{color:var(--mut);font-weight:600}
+
+/* ---------- Trust strip ---------- */
+.strip{background:var(--card);border-bottom:1px solid var(--line)}
+.strip__in{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:34px 0}
+.strip__it{text-align:center}
+.strip__it b{font-family:'Fraunces';font-size:1.05rem;color:var(--teal);display:block;margin-top:6px}
+.strip__it small{color:var(--mut);font-weight:600;font-size:.86rem}
+.strip__ic{width:40px;height:40px;margin:0 auto;color:var(--green-d)}
+
+/* ---------- Section heads ---------- */
+.shead{max-width:660px;margin-bottom:48px}
+.shead.center{margin:0 auto 48px;text-align:center}
+.shead h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-top:10px}
+.shead p{color:var(--mut);font-size:1.1rem;margin-top:14px}
+
+/* ---------- Services ---------- */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc__c{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .2s,box-shadow .2s}
+.svc__c:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.svc__ic{width:48px;height:48px;border-radius:12px;background:#E7F6EB;color:var(--green-d);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.svc__ic svg{width:26px;height:26px}
+.svc__c h3{font-size:1.18rem;margin-bottom:7px}
+.svc__c p{color:var(--mut);font-size:.97rem}
+
+/* ---------- Why ---------- */
+.why{background:var(--teal);color:#fff}
+.why .shead h2{color:#fff}
+.why .shead p{color:#CFE6DC}
+.why__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.why__c{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:28px}
+.why__c h3{color:#8FE6A0;font-size:1.22rem;margin-bottom:9px}
+.why__c p{color:#D9EBE4;font-size:1rem}
+
+/* ---------- Testimonials ---------- */
+.tst{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tst__c{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+.stars{color:#F2B705;font-size:1.05rem;letter-spacing:2px;margin-bottom:14px}
+.tst__c p{font-size:1.02rem;color:var(--ink);flex:1}
+.tst__by{margin-top:20px;display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:16px}
+.tst__av{width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:600}
+.tst__by b{font-family:'Mulish';font-weight:800;color:var(--teal)}
+.tst__by small{color:var(--mut);display:block;font-weight:600}
+
+/* ---------- Gallery ---------- */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:14px}
+.gal__a{grid-column:span 2;grid-row:span 2}
+
+/* ---------- About ---------- */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.about img{border-radius:18px;height:430px;width:100%;object-fit:cover;box-shadow:var(--shadow)}
+.about h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:18px}
+.about p{color:var(--mut);font-size:1.08rem;margin-bottom:16px}
+.about ul{list-style:none;margin-top:18px}
+.about li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-weight:600;color:var(--ink)}
+.about li svg{width:22px;height:22px;color:var(--green-d);flex-shrink:0;margin-top:2px}
+
+/* ---------- Location ---------- */
+.loc{background:var(--card);border-top:1px solid var(--line)}
+.loc__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.loc__c{border:1px solid var(--line);border-radius:18px;padding:30px;background:var(--bg)}
+.loc__c h3{font-size:1.3rem;margin-bottom:10px}
+.loc__c .row{display:flex;gap:10px;align-items:flex-start;color:var(--mut);font-weight:600;margin-bottom:10px}
+.loc__c .row svg{width:20px;height:20px;color:var(--green-d);flex-shrink:0;margin-top:3px}
+.loc__c .btn{margin-top:8px;width:100%}
+
+/* ---------- Final CTA ---------- */
+.final{background:linear-gradient(150deg,#2DB742 0%,#1F9A35 100%);color:#fff;text-align:center}
+.final h2{color:#fff;font-size:clamp(2rem,4vw,2.9rem);max-width:18em;margin:0 auto 16px}
+.final p{color:#E6F9EA;font-size:1.16rem;max-width:34em;margin:0 auto 30px}
+.final .btn--cta{background:#fff;color:var(--green-d);box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.final .btn--cta:hover{background:#F0FFF3;color:var(--green-d)}
+.final .btn--wa{background:rgba(255,255,255,.14);color:#fff;border:2px solid rgba(255,255,255,.5)}
+.final .btn--wa:hover{background:rgba(255,255,255,.24);color:#fff}
+.final__row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ---------- Footer ---------- */
+.foot{background:var(--teal-d);color:#CFE6DC;padding:54px 0 30px}
+.foot__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:34px}
+.foot__brand img{height:54px;margin-bottom:14px;filter:brightness(0) invert(1)}
+.foot__brand p{color:#9EBFB4;font-size:.96rem;max-width:26em}
+.foot h4{color:#fff;font-size:1.05rem;margin-bottom:14px;font-family:'Mulish';font-weight:800}
+.foot a{display:flex;align-items:center;gap:9px;color:#CFE6DC;font-weight:600;margin-bottom:11px;transition:color .15s;width:fit-content}
+.foot a:hover,.foot a:focus{color:#8FE6A0;outline:none}
+.foot a svg{width:18px;height:18px}
+.foot__bot{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;text-align:center;color:#7FA295;font-size:.88rem}
+
+/* ---------- Reveal ---------- */
+.rev{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.rev.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .hero__grid,.about{grid-template-columns:1fr;gap:36px}
+  .hero__media img{height:360px}
+  .svc,.why__grid,.tst{grid-template-columns:1fr 1fr}
+  .strip__in{grid-template-columns:1fr 1fr;gap:28px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+  .gal__a{grid-column:span 2;grid-row:span 1}
+  .loc__grid{grid-template-columns:1fr}
+  .foot__grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  body{font-size:16px}
+  .sec{padding:60px 0}
+  .wrap{padding:0 18px}
+  .nav{display:none;position:absolute;top:84px;left:0;right:0;background:var(--bg);flex-direction:column;gap:0;padding:8px 18px 18px;border-bottom:1px solid var(--line);box-shadow:var(--shadow);z-index:40}
+  .nav.open{display:flex}
+  .nav a{padding:14px 0;width:100%;border-bottom:1px solid var(--line)}
+  .head__in .btn{display:none}
+  .burger{display:flex}
+  .svc,.why__grid,.tst,.strip__in,.foot__grid{grid-template-columns:1fr}
+  .hero__media img{height:300px}
+  .hero__badge{left:0;max-width:200px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
+  .about img{height:320px}
+  .btn{width:100%}
+  .hero__ces .btn,.final__row .btn,.loc__c .btn{width:100%}
+  .hero__trust{gap:18px}
+}
+</style>
+
+<style id="ro-offer-css">
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap');
+:root{ --ro-band-h:60px; --ro-blue:#1d4ed8; --ro-blue-deep:#1330a6; --ro-ink:#0a1330; --ro-round:26px;
+  --ro-disp:'Satoshi',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --ro-cta:linear-gradient(135deg,#e63946 0%,#e63946 58%,#ff7d35 100%);
+  --ro-cta-hover:linear-gradient(135deg,#d62828 0%,#d62828 58%,#ff6b20 100%); }
+#ro-band,#ro-modal,#ro-oferta{ font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased; box-sizing:border-box; max-width:100vw; }
+#ro-band,#ro-modal,#ro-oferta,
+#ro-band *,#ro-modal *,#ro-oferta *{ box-sizing:border-box; max-width:100%; }
+/* push host site below the band; un-stick host headers/navs (keep them, just not fixed); prevent horizontal scroll */
+body{ padding-top:var(--ro-band-h) !important; overflow-x:hidden; }
+body > header, header, .header, #header, .site-header, [class*="navbar"], [class*="nav-bar"],
+nav[class*="fixed"], nav[class*="sticky"]{ position:static !important; top:auto !important; }
+/* hide host floating buttons / chat widgets so nothing floats over the offer.
+   NOTE: do NOT hide by `a[href*="wa.me"]` — our generated funnel pages use
+   WhatsApp links as their PRIMARY in-page CTAs and must stay visible. Only
+   named floating widgets (class/id) are suppressed here. */
+[class*="whatsapp-float" i],[class*="whatsapp_float" i],[id*="whatsapp" i],
+[class*="back-to-top" i],[class*="scroll-top" i],[class*="scrolltop" i],[class*="floating-button" i],
+[class*="float-btn" i],[class*="float-button" i],[class*="chat-widget" i],[class*="chat-button" i],[class*="chat-bubble" i]{
+  display:none !important; }
+/* constrain host footer to prevent horizontal overflow */
+footer, [class*="footer" i], [id*="footer" i] {
+  max-width:100%; box-sizing:border-box; overflow-x:hidden; width:100%;
+}
+footer *, [class*="footer" i] *, [id*="footer" i] * {
+  max-width:100%; box-sizing:border-box;
+}
+@keyframes ro-band-up{ to{ transform:translateY(calc(-100% - 20px)); } }
+@keyframes ro-band-down{ from{ transform:translateY(calc(-100% - 20px)); } to{ transform:none; } }
+
+/* ---- top greeting band (full width, LEFT aligned, normal body font). ---- */
+#ro-band{ position:fixed; top:0; left:0; right:0; min-height:var(--ro-band-h); z-index:2147483600;
+  display:flex; align-items:center; justify-content:flex-start; gap:8px; padding:10px clamp(18px,4vw,44px);
+  background:linear-gradient(90deg,var(--ro-blue-deep),var(--ro-blue) 60%,#2a5bff); color:#fff !important;
+  font-size:14.5px; letter-spacing:.01em; box-shadow:0 6px 22px rgba(10,19,48,.30); border-radius:0;
+  text-align:left; will-change:transform; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif !important; font-weight:400; }
+#ro-band::before,#ro-band::after{ content:""; position:absolute; top:100%; width:var(--ro-round); height:var(--ro-round); pointer-events:none; }
+#ro-band::before{ left:0;  background:radial-gradient(circle at bottom right, transparent var(--ro-round), var(--ro-blue-deep) var(--ro-round)); }
+#ro-band::after{  right:0; background:radial-gradient(circle at bottom left,  transparent var(--ro-round), #2a5bff var(--ro-round)); }
+#ro-band .ro-bt{ font-weight:400; }
+#ro-band .ro-sign{ font-weight:300; opacity:.35; margin-left:2px; white-space:nowrap; }
+@media(max-width:720px){ :root{ --ro-band-h:64px; --ro-round:18px; } #ro-band{ font-size:12px; gap:0; flex-direction:row; align-items:center; line-height:1.2; padding:8px clamp(14px,3vw,24px) !important; }
+  #ro-band .ro-sign{ margin-left:4px; opacity:.3; } }
+
+/* ---- modal (wider, LEFT aligned for body copy, CENTER-aligned for price) ---- */
+#ro-modal{ position:fixed; inset:0; z-index:2147483640; display:none; align-items:center; justify-content:center;
+  padding:22px; background:rgba(8,14,38,.55); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); }
+#ro-modal.ro-open{ display:flex; animation:ro-fade .25s ease; }
+@keyframes ro-fade{ from{opacity:0} to{opacity:1} }
+#ro-modal .ro-card{ position:relative; width:calc(100% - 24px); max-width:640px; max-height:94vh; overflow:auto; background:#fff; color:var(--ro-ink) !important;
+  border-radius:28px; padding:40px 44px 34px; text-align:center; box-shadow:0 40px 100px rgba(8,14,38,.45);
+  animation:ro-pop .3s cubic-bezier(.2,.9,.3,1.2); }
+@media(max-width:560px){ #ro-modal .ro-card{ width:85vw; max-width:85vw; padding:24px 14px 20px; max-height:85vh; } }
+@keyframes ro-pop{ from{opacity:0; transform:translateY(18px) scale(.97)} to{opacity:1; transform:none} }
+#ro-modal .ro-x2{ position:absolute; top:14px; right:16px; width:32px; height:32px; border-radius:50%;
+  background:#eef1f9; border:0; color:#6b7793; font-size:18px; cursor:pointer; z-index:2; transition:background .15s,color .15s; }
+#ro-modal .ro-x2:hover{ background:#e2e7f3; color:var(--ro-ink); }
+#ro-modal h2{ font-family:var(--ro-disp); margin:2px 0 12px; font-size:36px; line-height:1.04; font-weight:900; letter-spacing:-.02em; color:var(--ro-ink) !important; padding-right:40px; }
+#ro-modal p.ro-mbody{ margin:0 0 18px; color:#4a5573 !important; font-size:16.5px; line-height:1.6; }
+/* modal header: text top-left, ICP photo dominant + pushed DOWN so it nearly
+   touches the reviews below (people tie the happy face to the testimonials) */
+#ro-modal .ro-mhead{ display:flex; align-items:flex-start; gap:22px; text-align:left; margin-bottom:6px; }
+#ro-modal .ro-mhead-txt{ flex:1 1 auto; min-width:0; padding-top:6px; }
+#ro-modal .ro-mhead h2{ margin:2px 0 12px; padding-right:0; text-align:left; }
+#ro-modal .ro-mhead .ro-mbody{ margin:0; }
+/* natural aspect ratio (no crop); bottom-aligned so it meets the reviews */
+#ro-modal .ro-mimg{ position:relative; flex:0 0 auto; align-self:flex-end; width:184px; border-radius:0; overflow:visible; background:#fff; }
+#ro-modal .ro-mimg img{ width:100%; height:auto; display:block; }
+#ro-modal .ro-mimg .ro-mimg-ph{ width:100%; height:auto; }
+/* green shield badge top-left */
+#ro-modal .ro-mimg::after{ content:'✓'; position:absolute; top:-8px; left:-8px; width:40px; height:40px;
+  background:#22c55e; border-radius:50%; box-shadow:0 4px 12px rgba(34,197,94,.35);
+  display:flex; align-items:center; justify-content:center; color:#fff; font-size:22px; font-weight:900; line-height:1; }
+#ro-modal .ro-rlabel{ text-align:right; }
+@media(max-width:560px){ #ro-modal .ro-mhead{ gap:10px; flex-wrap:nowrap; align-items:flex-start; }
+  #ro-modal .ro-mhead-txt{ flex:1 1 auto; } #ro-modal .ro-mhead h2{ font-size:22px; margin:0 0 6px; }
+  #ro-modal .ro-mhead .ro-mbody{ font-size:13px; margin:0; } #ro-modal .ro-mimg{ flex:0 0 auto; width:110px; height:175px; margin-top:0; }
+  #ro-modal p.ro-mbody{ font-size:14px; } #ro-modal .ro-rlabel{ font-size:11px; margin:10px 0 8px; }
+  #ro-modal .ro-btn{ font-size:16px; padding:14px 18px; } }
+#ro-modal .ro-rlabel{ font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:#8a93ad !important; margin:0 0 8px; }
+.ro-reviews{ position:relative; overflow:hidden; }
+.ro-rev-track{ display:flex; transition:transform .5s cubic-bezier(.4,0,.2,1); }
+.ro-rev{ min-width:100%; padding:16px 18px; background:#f3f6ff; border-radius:16px; text-align:left; }
+.ro-rev .ro-stars{ color:#ffb400; font-size:14px; letter-spacing:2px; }
+.ro-rev p{ margin:8px 0 10px; font-size:14px; color:#2a3550 !important; line-height:1.5; font-style:italic; }
+.ro-rev b{ font-size:12.5px; color:var(--ro-ink) !important; }
+.ro-dots{ display:flex; gap:6px; justify-content:center; margin:14px 0 0; }
+.ro-dot{ width:6px; height:6px; border-radius:50%; background:#d1d5db; transition:background .2s,width .2s; }
+.ro-dot.on{ background:var(--ro-blue); width:18px; border-radius:3px; }
+.ro-pricepill{ display:flex; flex-direction:column; align-items:center; gap:4px; background:#f3f6ff; border:1px solid #dbe4ff;
+  border-radius:18px; padding:16px 28px; margin:18px auto 8px; }
+.ro-pricepill .lab{ font-size:12px; color:#64708e !important; letter-spacing:.02em; }
+.ro-pricepill .a{ font-family:var(--ro-disp); font-size:32px; font-weight:900; color:var(--ro-ink) !important; line-height:1; }
+.ro-pricepill .b{ font-size:15px; font-weight:700; color:#4a5573 !important; }
+.ro-btn{ display:block; width:100%; background:var(--ro-cta) !important; color:#fff !important; font-weight:800; font-size:18px;
+  border:0; border-radius:16px; padding:18px 24px; margin-top:14px; cursor:pointer; text-decoration:none; text-align:center;
+  box-shadow:0 0 32px rgba(230,57,70,.45), inset 0 0 16px rgba(255,140,66,.32); transition:box-shadow .18s,background .18s; }
+.ro-btn:hover{ background:var(--ro-cta-hover) !important; box-shadow:0 0 44px rgba(230,57,70,.65), inset 0 0 20px rgba(255,160,90,.45); }
+#ro-modal .ro-note{ margin:16px 0 0; font-size:12.5px; color:#8a93ad !important; letter-spacing:.01em; }
+
+/* ---- bottom offer section: demonstration close.
+   Mobile = single centered column. Desktop ≥880px = two columns:
+   claim + the deal LEFT, de-risk + proof + objections RIGHT. ---- */
+#ro-oferta{ position:relative;
+  background:
+    radial-gradient(circle at top left, var(--ro-blue-deep) 26px, transparent 26px),
+    radial-gradient(circle at top right, var(--ro-blue-deep) 26px, transparent 26px),
+    linear-gradient(180deg,#2a5bff 0%,var(--ro-blue) 32%,var(--ro-blue-deep) 100%);
+  background-size: 52px 52px, 52px 52px, 100% 100%;
+  background-position: bottom left, bottom right, 0 0;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  color:#fff !important; padding:78px clamp(20px,5vw,60px) 30px; text-align:center; border-radius:0; margin-top:0; }
+/* top corners: curved elements above the section */
+#ro-oferta::before,#ro-oferta::after{ content:""; position:absolute; bottom:100%; width:var(--ro-round); height:var(--ro-round); pointer-events:none; z-index:1; }
+#ro-oferta::before{ left:0; background:radial-gradient(circle at top right, transparent var(--ro-round), #2a5bff var(--ro-round)); }
+#ro-oferta::after{ right:0; background:radial-gradient(circle at top left, transparent var(--ro-round), #2a5bff var(--ro-round)); }
+#ro-oferta .ro-wrap{ max-width:1240px; margin:0 auto; }
+.ro-grid{ max-width:560px; margin:0 auto; }
+#ro-oferta .ro-eyebrow{ color:#bcd0ff !important; font-weight:800; font-size:13.5px; letter-spacing:.18em; }
+#ro-oferta h2{ font-family:var(--ro-disp); margin:16px 0 16px; font-size:clamp(40px,5.6vw,60px); line-height:1.01; font-weight:900; letter-spacing:-.03em; color:#fff !important; white-space:pre-line; }
+#ro-oferta .ro-sub{ margin:0 auto; max-width:560px; font-size:18.5px; line-height:1.6; color:#dbe6ff !important; }
+
+/* included chips (what you get for $75/mo — no fake prices) */
+.ro-chips{ display:flex; flex-wrap:wrap; gap:10px 12px; justify-content:center; margin:26px auto; max-width:540px; }
+.ro-chip{ display:inline-flex; align-items:center; gap:8px; font-size:14.5px; font-weight:600; color:#eaf0ff !important;
+  background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.18); border-radius:999px; padding:10px 18px; }
+.ro-chip svg{ flex:0 0 auto; color:#bcd0ff; }
+@media(max-width:560px){ .ro-chips{ gap:8px 10px; margin:18px auto; }
+  .ro-chip{ font-size:13px; padding:8px 14px; gap:6px; } }
+
+/* the deal — semi-transparent panel (anchor + price + CTA) */
+.ro-deal{ display:flex; flex-direction:column; align-items:center; gap:3px; width:100%; max-width:420px; margin:16px auto 0;
+  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.16); border-radius:20px; padding:24px 28px; }
+.ro-deal-anchor{ font-size:12.5px; color:#9fb3e8 !important; text-decoration:line-through; text-decoration-color:rgba(159,179,232,.5); }
+.ro-now-lab{ font-size:13px; color:#cfdcff !important; margin-top:4px; letter-spacing:.02em; }
+.ro-bigprice{ display:flex; align-items:baseline; gap:11px; }
+.ro-bigprice .np{ font-family:var(--ro-disp); font-size:clamp(42px,6.4vw,54px); font-weight:900; letter-spacing:-.035em; color:#fff !important; line-height:1; }
+.ro-bigprice .nm{ font-size:17px; font-weight:700; color:#cdd9ff !important; }
+.ro-deal .ro-btn{ width:100%; max-width:none; margin-top:18px; }
+#ro-oferta .ro-why{ font-size:12.5px; color:#aebbe6 !important; margin:14px auto 0; max-width:420px; line-height:1.5; }
+
+/* de-risk reassurance — plain text, no box */
+.ro-derisk{ display:flex; align-items:center; gap:12px; text-align:left; margin:18px 0 0;
+  font-size:14px; font-weight:600; color:#eaf0ff !important; line-height:1.45; }
+.ro-derisk-ic{ flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center; }
+.ro-proof-label{ font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#9fb3e8 !important; margin:22px 0 12px; }
+/* reviews: stepped peek carousel — one centered & fully visible, neighbors peek,
+   pauses on each, then advances. JS-driven, seamless (cards rendered 3×). */
+.ro-rcar{ position:relative; overflow:hidden; padding:12px 0;
+  -webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+          mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); }
+.ro-rtrack{ display:flex; will-change:transform; }
+.ro-rcard{ flex:0 0 60%; margin-right:16px; background:#fff; color:var(--ro-ink) !important; border-radius:18px; padding:22px 24px; text-align:left;
+  box-shadow:0 20px 44px rgba(8,14,38,.20); }
+.ro-rcard .ro-stars{ color:#ffb400; font-size:13.5px; letter-spacing:2px; }
+.ro-rcard p{ margin:10px 0 12px; font-size:14.5px; color:#2a3550 !important; line-height:1.55; font-style:italic; }
+.ro-rcard b{ font-size:12.5px; color:var(--ro-ink) !important; }
+@media(prefers-reduced-motion:reduce){ .ro-rtrack{ transition:none !important; } }
+
+/* objections — compact, collapsed */
+.ro-faq{ margin:26px auto 20px; text-align:left; }
+.ro-faq h3{ font-family:var(--ro-disp); text-align:center; font-size:clamp(19px,2.3vw,24px); font-weight:900; letter-spacing:-.02em; color:#fff !important; margin:0 0 14px; }
+.ro-fitem{ background:rgba(255,255,255,.06); border-radius:13px; margin-bottom:8px; overflow:hidden; }
+.ro-fitem summary{ list-style:none; cursor:pointer; padding:14px 18px; font-size:14.5px; font-weight:700; color:#fff !important; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.ro-fitem summary::-webkit-details-marker{ display:none; }
+.ro-fitem summary .ro-fic{ flex:0 0 auto; width:22px; height:22px; border-radius:50%; background:rgba(255,255,255,.16); display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:700; transition:transform .25s; }
+.ro-fitem[open] summary .ro-fic{ transform:rotate(45deg); }
+.ro-fitem .ro-fans{ padding:0 18px 15px; font-size:14px; line-height:1.55; color:#dbe6ff !important; }
+
+/* mobile: smaller fonts, tighter spacing, prevent overflow */
+@media(max-width:560px){
+  #ro-oferta{ padding:60px clamp(14px,3vw,32px) 30px; overflow-x:hidden; }
+  .ro-grid{ max-width:100%; padding:0; }
+  #ro-oferta h2{ font-size:clamp(28px,6vw,40px); margin:12px 0 12px; word-wrap:break-word; }
+  #ro-oferta .ro-sub{ font-size:15px; margin:0 auto 14px; overflow-wrap:break-word; }
+  .ro-proof-label{ font-size:11px; margin:16px 0 10px; }
+  .ro-deal{ max-width:calc(100% - 20px); margin:14px auto 0; padding:18px 16px; }
+  .ro-bigprice .np{ font-size:clamp(32px,7vw,44px); }
+  .ro-bigprice .nm{ font-size:15px; }
+  .ro-btn{ font-size:15px; padding:14px 20px; margin-top:14px; }
+  .ro-faq h3{ font-size:clamp(16px,4vw,20px); margin:0 0 12px; }
+  .ro-faq{ margin:18px auto 16px; max-width:calc(100% - 20px); }
+  .ro-fitem{ margin-bottom:6px; }
+  .ro-fitem summary{ font-size:13px; padding:12px 14px; gap:10px; word-wrap:break-word; }
+  .ro-fitem summary .ro-fic{ flex-shrink:0; width:20px; height:20px; font-size:13px; }
+  .ro-fitem .ro-fans{ padding:0 14px 12px; font-size:13px; }
+  .ro-derisk{ font-size:13px; margin:12px 0 0; max-width:calc(100% - 20px); }
+}
+
+/* desktop: two columns — claim + deal LEFT, proof + objections RIGHT */
+@media(min-width:880px){
+  .ro-grid{ max-width:none; display:grid; grid-template-columns:1.22fr 1fr; gap:32px; align-items:start; text-align:left; }
+  .ro-left, .ro-right{ min-width:0; }
+  #ro-oferta .ro-sub{ margin:0; }
+  .ro-chips{ justify-content:flex-start; margin:26px 0 30px; max-width:none; }
+  .ro-proof-label{ margin:0 0 14px; font-size:12.5px; }
+  /* right section: a bigger cohesive block, hugging the right edge and dropped lower */
+  .ro-right{ padding-top:46px; }
+  .ro-right .ro-derisk{ margin:0 0 0 auto; max-width:502px; font-size:15px; }
+  .ro-deal{ align-items:flex-start; margin:20px 0 0 auto; max-width:502px; }
+  .ro-faq{ margin:30px 0 20px auto; max-width:502px; }
+  .ro-faq h3{ text-align:left; }
+}
+@media(max-width:560px){ #ro-oferta{ padding:60px clamp(20px,5vw,60px) 70px; } .ro-deal{ padding:20px 24px; }
+  #ro-modal .ro-card{ padding:28px 22px 24px; } #ro-modal h2{ font-size:27px; } }
+</style>
+
+</head>
+<body>
+<div id="ro-band" role="region" aria-label="offer"><span class="ro-bt">👋 Hola, hicimos este sitio web para Pies Saludables PTY — échale un vistazo.</span><span class="ro-sign">— The Refresh Agency</span></div>
+<!-- HEADER (static) -->
+<header class="head">
+<div class="head__in">
+<a aria-label="Pies Saludables PTY — Inicio" class="brand" href="#inicio">
+<img alt="Logo Pies Saludables PTY" src="https://piessaludables.com.pa/wp-content/uploads/2024/04/Logo-Pies-Saludables_v2.png"/>
+</a>
+<nav class="nav" id="nav">
+<a href="#servicios">Servicios</a>
+<a href="#porque">Por qué nosotros</a>
+<a href="#opiniones">Opiniones</a>
+<a href="#ubicacion">Ubicación</a>
+</nav>
+<a class="btn btn--cta" href="https://wa.me/50767476568?text=%C2%A1Hola!%20Quiero%20agendar%20una%20cita%20en%20Pies%20Saludables" rel="noopener" target="_blank">Agendar por WhatsApp</a>
+<button aria-expanded="false" aria-label="Abrir menú" class="burger" id="burger"><span></span><span></span><span></span></button>
+</div>
+</header>
+<!-- HERO -->
+<section class="hero" id="inicio">
+<div class="wrap">
+<div class="hero__grid">
+<div class="rev in">
+<span class="eyebrow" style="color:#8FE6A0">Clínica #1 de quiropedia en Panamá</span>
+<h1>Pies Saludables: <em>camina sin dolor</em>, con pies sanos de verdad</h1>
+<p class="hero__sub">Tratamiento clínico para uñas encarnadas, hongos, callos y pie diabético — con desinfección y esterilización total por ozono. En San Francisco y Juan Díaz.</p>
+<div class="hero__ces">
+<a class="btn btn--cta btn--lg" href="https://wa.me/50767476568?text=%C2%A1Hola!%20Quiero%20agendar%20una%20cita%20en%20Pies%20Saludables" rel="noopener" target="_blank">Agendar mi cita</a>
+<a class="btn btn--ghost btn--lg" href="#servicios" style="color:#fff;border-color:rgba(255,255,255,.4)">Ver tratamientos</a>
+</div>
+<div class="hero__trust">
+<div><b>+10</b> tratamientos clínicos</div>
+<div><b>2</b> sucursales en la ciudad</div>
+<div><b>Ozono</b> esterilización total</div>
+</div>
+</div>
+<div class="hero__media rev in">
+<img alt="Procedimiento clínico de quiropedia en Pies Saludables PTY" src="https://piessaludables.com.pa/wp-content/uploads/2024/05/professional-medical-pedicure-procedure-while-doct-2023-11-27-04-57-44-utc-Mediana-1024x683.jpg"/>
+<div class="hero__badge">
+<b>Desinfección total</b>
+<small>Instrumental esterilizado por ozono en cada procedimiento</small>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TRUST STRIP -->
+<section class="strip">
+<div class="wrap">
+<div class="strip__in">
+<div class="strip__it">
+<div class="strip__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
+<b>Asepsia garantizada</b><small>Limpieza, desinfección y esterilización</small>
+</div>
+<div class="strip__it">
+<div class="strip__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"></path><circle cx="12" cy="11" r="2.5"></circle></svg></div>
+<b>San Francisco y Juan Díaz</b><small>Dos sucursales en Ciudad de Panamá</small>
+</div>
+<div class="strip__it">
+<div class="strip__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div>
+<b>Todos los días</b><small>Lun a Dom · 9:00 am – 7:00 pm</small>
+</div>
+<div class="strip__it">
+<div class="strip__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 2v20M5 8c0-2 2-4 7-4s7 2 7 4-2 3-7 3-7 1-7 3 2 4 7 4 7-2 7-4"></path></svg></div>
+<b>Atención al diabético</b><small>Cuidado especializado y seguimiento</small>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVICES -->
+<section class="sec" id="servicios">
+<div class="wrap">
+<div class="shead center rev">
+<span class="eyebrow">Tratamientos</span>
+<h2>Soluciones clínicas para cada problema de tus pies</h2>
+<p>Atención técnica y personalizada para la salud integral de uñas y piel — no es estética, es salud.</p>
+</div>
+<div class="svc">
+<div class="svc__c rev"><div class="svc__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M6 18c0-4 2-9 6-9s6 5 6 9"></path><path d="M9 9V5M15 9V6"></path></svg></div><h3>Uñas encarnadas</h3><p>Onicocriptosis: corrección del recorte, alivio del dolor y seguimiento hasta el alta.</p></div>
+<div class="svc__c rev"><div class="svc__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12a4 4 0 008 0"></path></svg></div><h3>Hongos en uñas</h3><p>Onicomicosis: tratamiento para recuperar uñas sanas y restauradas por completo.</p></div>
+<div class="svc__c rev"><div class="svc__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 16c2-1 4-1 6 0s4 1 6 0 4-1 4-1"></path><path d="M7 12c1-3 3-5 5-5s4 2 5 5"></path></svg></div><h3>Uñas engrosadas</h3><p>Onicogrifosis: rebaje y tratamiento de uñas gruesas para que vuelvas a usar tu calzado.</p></div>
+<div class="svc__c rev"><div class="svc__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><circle cx="12" cy="12" r="8"></circle></svg></div><h3>Callos e hiperqueratosis</h3><p>Eliminación de callosidades y durezas plantares para caminar cómodo otra vez.</p></div>
+<div class="svc__c rev"><div class="svc__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3c3 4 5 6 5 9a5 5 0 01-10 0c0-3 2-5 5-9z"></path></svg></div><h3>Verrugas plantares</h3><p>Tratamiento de verrugas y lesiones plantares con técnica clínica y seguimiento.</p></div>
+<div class="svc__c rev"><div class="svc__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 13c0-4 3-7 7-7s7 3 7 7"></path><path d="M3 13h18M8 17h8"></path></svg></div><h3>Hiperhidrosis</h3><p>Control del sudor excesivo y los hongos plantares que provoca, con tratamiento dirigido.</p></div>
+<div class="svc__c rev"><div class="svc__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 21C7 17 4 14 4 10a4 4 0 018-1 4 4 0 018 1c0 4-3 7-8 11z"></path></svg></div><h3>Atención al diabético</h3><p>Cuidado podal especializado para personas con diabetes, con prevención y control.</p></div>
+<div class="svc__c rev"><div class="svc__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 12c2-2 4-3 8-3s6 1 8 3M6 16c2-1 3-1 6-1s4 0 6 1"></path></svg></div><h3>Hidroterapia y masajes</h3><p>Masajes de hidroterapia y masaje manual que relajan y reactivan la circulación.</p></div>
+<div class="svc__c rev"><div class="svc__ic"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 6v12M6 12h12" stroke-linecap="round"></path></svg></div><h3>Pedicura clínica</h3><p>Limpieza profunda y profesional de tus pies, manteniendo la salud de uñas y piel.</p></div>
+</div>
+</div>
+</section>
+<!-- WHY -->
+<section class="why sec" id="porque">
+<div class="wrap">
+<div class="shead center rev">
+<span class="eyebrow" style="color:#8FE6A0">Por qué Pies Saludables</span>
+<h2>Una clínica, no un salón</h2>
+<p>Lo que nos hace la elección número uno para cuidar tus pies en Panamá.</p>
+</div>
+<div class="why__grid">
+<div class="why__c rev"><h3>Esterilización por ozono</h3><p>Cumplimos las 3 funciones de la técnica en quiropedia: limpieza, desinfección y esterilización del instrumental quirúrgico en cada procedimiento.</p></div>
+<div class="why__c rev"><h3>Tratamiento con seguimiento</h3><p>No improvisamos: diagnosticamos la causa, aplicamos el tratamiento adecuado y te acompañamos con controles hasta darte de alta.</p></div>
+<div class="why__c rev"><h3>Técnico-clínico, no estético</h3><p>Nos enfocamos en la salud integral de uñas y piel. Resultados reales, no soluciones temporales.</p></div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS -->
+<section class="sec" id="opiniones">
+<div class="wrap">
+<div class="shead center rev">
+<span class="eyebrow">Opiniones reales</span>
+<h2>Pacientes que volvieron a caminar tranquilos</h2>
+</div>
+<div class="tst">
+<div class="tst__c rev">
+<div class="stars">★★★★★</div>
+<p>"Sufría mucho con mis uñas encarnadas. Me diagnosticaron que la causa era por mal recorte, me realizaron el recorte adecuado y llevé mi seguimiento. Después de nueve meses ya no siento incomodidad ni dolor y me dieron de alta. Recomendados."</p>
+<div class="tst__by"><div class="tst__av">JL</div><div><b>José Lartiga</b><small>Paciente · Reseña de Google</small></div></div>
+</div>
+<div class="tst__c rev">
+<div class="stars">★★★★★</div>
+<p>"Mis uñas no se veían bien, me había contagiado de hongos y no usaba sandalias por pena. Llevo 6 meses en tratamiento y mis uñas se ven bien. Sigo yendo porque me agrada su profesionalismo y los masajes que recibo en mis pies."</p>
+<div class="tst__by"><div class="tst__av">MH</div><div><b>Marisol Hernández</b><small>Paciente · Reseña de Google</small></div></div>
+</div>
+<div class="tst__c rev">
+<div class="stars">★★★★★</div>
+<p>"Creía que lo mío no tenía solución, sentía escozor y me salieron ampollitas que dolían. Me recomendaron Pies Saludables y no pensé que iba a sanar tan rápido. Ahora gozo de una nueva y buena calidad de vida en mis pies."</p>
+<div class="tst__by"><div class="tst__av">JÁ</div><div><b>Josefina Álvarez</b><small>Paciente · Reseña de Google</small></div></div>
+</div>
+</div>
+</div>
+</section>
+<!-- GALLERY -->
+<section class="sec" style="padding-top:0">
+<div class="wrap">
+<div class="gal rev">
+<img alt="Procedimiento de quiropedia clínica" class="gal__a" src="https://piessaludables.com.pa/wp-content/uploads/2024/05/professional-medical-pedicure-procedure-while-doct-2023-11-27-04-57-44-utc-Mediana-1024x683.jpg"/>
+<img alt="Pies sanos después del tratamiento" src="https://piessaludables.com.pa/wp-content/uploads/2024/04/pies-sanos-scaled-2-1024x682.jpg"/>
+<img alt="Cuidado profesional de los pies" src="https://piessaludables.com.pa/wp-content/uploads/2024/04/Cuidado-pies-744x465-1.jpg"/>
+<img alt="Pies saludables y cuidados" src="https://piessaludables.com.pa/wp-content/uploads/2024/04/pies-piscina.jpg-1024x768.webp"/>
+<img alt="Resultado de tratamiento podológico" src="https://piessaludables.com.pa/wp-content/uploads/2024/04/pies-sanos-scaled-1-1024x684.jpg"/>
+</div>
+</div>
+</section>
+<!-- ABOUT -->
+<section class="sec" style="background:var(--card);border-top:1px solid var(--line)">
+<div class="wrap">
+<div class="about">
+<img alt="Pies Saludables PTY — cuidado clínico de pies en Panamá" class="rev" src="https://piessaludables.com.pa/wp-content/uploads/2024/04/pies-sanos-scaled-1-1024x684.jpg"/>
+<div class="rev">
+<span class="eyebrow">Sobre nosotros</span>
+<h2>La clínica #1 en quiropedia de Panamá</h2>
+<p>En Pies Saludables PTY ofrecemos tratamientos efectivos y personalizados para la salud y el bienestar de tus pies. Nuestro servicio es técnico-clínico: nos enfocamos en la salud integral de tus uñas y piel.</p>
+<p>Por eso, en cada procedimiento mantenemos total desinfección, asepsia y esterilización del instrumental mediante sistemas de ozono.</p>
+<ul>
+<li><svg fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12l4 4L19 6"></path></svg> Diagnóstico de la causa real, no solo del síntoma</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12l4 4L19 6"></path></svg> Seguimiento y controles hasta darte de alta</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12l4 4L19 6"></path></svg> Dos sucursales: San Francisco y Juan Díaz</li>
+</ul>
+<a class="btn btn--cta btn--lg" href="https://wa.me/50767476568?text=%C2%A1Hola!%20Quiero%20agendar%20una%20cita%20en%20Pies%20Saludables" rel="noopener" style="margin-top:26px" target="_blank">Agendar mi valoración</a>
+</div>
+</div>
+</div>
+</section>
+<!-- LOCATION -->
+<section class="loc sec" id="ubicacion">
+<div class="wrap">
+<div class="shead center rev">
+<span class="eyebrow">Visítanos</span>
+<h2>Dos sucursales para atenderte</h2>
+<p>Abierto todos los días, de 9:00 am a 7:00 pm.</p>
+</div>
+<div class="loc__grid">
+<div class="loc__c rev">
+<h3>San Francisco</h3>
+<div class="row"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"></path><circle cx="12" cy="11" r="2.5"></circle></svg> San Francisco, Ciudad de Panamá</div>
+<div class="row"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"></path></svg> 6747-6568</div>
+<div class="row"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg> Lun a Dom · 9:00 am – 7:00 pm</div>
+<a class="btn btn--cta" href="https://wa.me/50767476568?text=%C2%A1Hola!%20Quiero%20agendar%20en%20la%20sucursal%20de%20San%20Francisco" rel="noopener" target="_blank">Agendar en San Francisco</a>
+</div>
+<div class="loc__c rev">
+<h3>Juan Díaz</h3>
+<div class="row"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"></path><circle cx="12" cy="11" r="2.5"></circle></svg> Juan Díaz, Ciudad de Panamá</div>
+<div class="row"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"></path></svg> 6739-3928</div>
+<div class="row"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg> Lun a Dom · 9:00 am – 7:00 pm</div>
+<a class="btn btn--cta" href="https://wa.me/50767393928?text=%C2%A1Hola!%20Quiero%20agendar%20en%20la%20sucursal%20de%20Juan%20D%C3%ADaz" rel="noopener" target="_blank">Agendar en Juan Díaz</a>
+</div>
+</div>
+<div class="rev" style="text-align:center;margin-top:26px">
+<a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Pies+Saludables+PTY+Panama" rel="noopener" target="_blank">Ver en Google Maps</a>
+</div>
+</div>
+</section>
+<!-- FINAL CTA -->
+<section class="final sec">
+<div class="wrap rev">
+<h2>Tus pies merecen una clínica de verdad</h2>
+<p>Escríbenos por WhatsApp y agenda tu cita hoy. Atención el mismo día según disponibilidad.</p>
+<div class="final__row">
+<a class="btn btn--cta btn--lg" href="https://wa.me/50767476568?text=%C2%A1Hola!%20Quiero%20agendar%20una%20cita%20en%20Pies%20Saludables" rel="noopener" target="_blank">Agendar por WhatsApp</a>
+<a class="btn btn--wa btn--lg" href="tel:+50767476568">Llamar: 6747-6568</a>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer class="foot">
+<div class="wrap">
+<div class="foot__grid">
+<div class="foot__brand">
+<img alt="Pies Saludables PTY" src="https://piessaludables.com.pa/wp-content/uploads/2024/04/Logo-Pies-Saludables_v2.png"/>
+<p>Clínica #1 de quiropedia en Panamá. Tratamiento clínico de uñas, hongos, callos y pie diabético con esterilización total por ozono.</p>
+</div>
+<div>
+<h4>Contacto</h4>
+<a href="https://wa.me/50767476568" rel="noopener" target="_blank"><svg fill="currentColor" viewbox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15l-1.4 5 5.1-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1112 20zm4.6-5.9c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.5 6.5 0 01-1.9-1.2 7.2 7.2 0 01-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4a.5.5 0 000-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4 5.3 5.3 0 002.3.5 2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.2-1.3c-.1-.1-.3-.2-.5-.3z"></path></svg> WhatsApp San Francisco</a>
+<a href="tel:+50767476568"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"></path></svg> 6747-6568 · San Francisco</a>
+<a href="tel:+50767393928"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"></path></svg> 6739-3928 · Juan Díaz</a>
+</div>
+<div>
+<h4>Sucursales</h4>
+<a href="#ubicacion"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"></path></svg> San Francisco</a>
+<a href="#ubicacion"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"></path></svg> Juan Díaz</a>
+<a href="https://piessaludables.com.pa" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"></path></svg> piessaludables.com.pa</a>
+</div>
+</div>
+<div class="foot__bot">© 2026 Pies Saludables PTY · Clínica de quiropedia en Ciudad de Panamá · Lun a Dom 9:00 am – 7:00 pm</div>
+</div>
+</footer>
+<script>
+// Mobile nav toggle
+const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
+// Scroll reveal
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
+
+<section id="ro-oferta"><div class="ro-wrap"><div class="ro-grid"><div class="ro-left"><div class="ro-eyebrow">LA OFERTA</div><h2>Todo esto es real.
+Y ya es tuyo.</h2><p class="ro-sub">El sitio que acabas de recorrer está terminado — con tu marca, tus fotos y tus reseñas. Tu sitio actual está costándote clientes. Este los trae de vuelta.</p><div class="ro-chips"><span class="ro-chip"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 7h4v4"/></svg>Impulsa tus ventas</span><span class="ro-chip"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>Tu dominio propio</span><span class="ro-chip"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Hosting y seguridad</span><span class="ro-chip"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.8-1.9c-.2-.4-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c.6.3 1.1.4 1.5.5a3.5 3.5 0 0 0 1.6.1c.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2-.2-.1-.4-.2z"/></svg>Botón de WhatsApp incluido</span><span class="ro-chip"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Carga en menos de 2 segundos</span><span class="ro-chip"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1" fill="currentColor"/></svg>Optimizado para móvil</span><span class="ro-chip"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Tres revisiones incluidas</span></div><div class="ro-proof-label">Opiniones sobre The Refresh Agency</div><div class="ro-rcar"><div class="ro-rtrack" id="ro-rtrack"><div class="ro-rcard"><div class="ro-stars">★★★★★</div><p>“Nos entregaron la página en pocos días y quedó mejor de lo que esperábamos. Cero complicaciones.”</p><b>Andrés M. · Negocio local</b></div><div class="ro-rcard"><div class="ro-stars">★★★★★</div><p>“El sitio se ve carísimo y ya nos está trayendo más clientes. Valió cada peso.”</p><b>Daniela R. · Clínica</b></div><div class="ro-rcard"><div class="ro-stars">★★★★★</div><p>“Súper rápidos y atentos. Pedí cambios y los hicieron al instante por WhatsApp.”</p><b>Carlos V. · Restaurante</b></div><div class="ro-rcard"><div class="ro-stars">★★★★★</div><p>“Más barato que cualquier agencia y mil veces más fácil. Lo recomiendo sin dudar.”</p><b>María José · Estética</b></div><div class="ro-rcard"><div class="ro-stars">★★★★★</div><p>“Nos entregaron la página en pocos días y quedó mejor de lo que esperábamos. Cero complicaciones.”</p><b>Andrés M. · Negocio local</b></div><div class="ro-rcard"><div class="ro-stars">★★★★★</div><p>“El sitio se ve carísimo y ya nos está trayendo más clientes. Valió cada peso.”</p><b>Daniela R. · Clínica</b></div><div class="ro-rcard"><div class="ro-stars">★★★★★</div><p>“Súper rápidos y atentos. Pedí cambios y los hicieron al instante por WhatsApp.”</p><b>Carlos V. · Restaurante</b></div><div class="ro-rcard"><div class="ro-stars">★★★★★</div><p>“Más barato que cualquier agencia y mil veces más fácil. Lo recomiendo sin dudar.”</p><b>María José · Estética</b></div><div class="ro-rcard"><div class="ro-stars">★★★★★</div><p>“Nos entregaron la página en pocos días y quedó mejor de lo que esperábamos. Cero complicaciones.”</p><b>Andrés M. · Negocio local</b></div><div class="ro-rcard"><div class="ro-stars">★★★★★</div><p>“El sitio se ve carísimo y ya nos está trayendo más clientes. Valió cada peso.”</p><b>Daniela R. · Clínica</b></div><div class="ro-rcard"><div class="ro-stars">★★★★★</div><p>“Súper rápidos y atentos. Pedí cambios y los hicieron al instante por WhatsApp.”</p><b>Carlos V. · Restaurante</b></div><div class="ro-rcard"><div class="ro-stars">★★★★★</div><p>“Más barato que cualquier agencia y mil veces más fácil. Lo recomiendo sin dudar.”</p><b>María José · Estética</b></div></div></div></div><div class="ro-right"><div class="ro-derisk"><span class="ro-derisk-ic"><svg width="15" height="17" viewBox="0 0 15 17" fill="none" aria-hidden="true"><path d="M4 7V5a3.5 3.5 0 0 1 7 0v2" stroke="#fff" stroke-width="1.6" fill="none"/><rect x="2" y="7" width="11" height="8.5" rx="2" fill="#fff"/><circle cx="7.5" cy="11" r="1.05" fill="#1d4ed8"/></svg></span><span>Sin contrato, cancelas cuando quieras y, si algo falla, lo arreglamos nosotros.</span></div><div class="ro-deal"><div class="ro-deal-anchor">Otra agencia: $1,200 y meses de espera</div><div class="ro-now-lab">Aquí lo activas por</div><div class="ro-bigprice"><span class="np">$500</span><span class="nm">+ $75/mes</span></div><a class="ro-btn" href="#ro-oferta">Activar mi sitio ya →</a></div><div class="ro-faq"><h3>Preguntas Frecuentes</h3><details class="ro-fitem"><summary>¿Cómo funciona?<span class="ro-fic">+</span></summary><div class="ro-fans">El sitio ya está hecho. Lo activas y queda en línea a tu nombre esta semana. Nosotros nos encargamos del dominio, el hosting y el mantenimiento.</div></details><details class="ro-fitem"><summary>¿El sitio es mío?<span class="ro-fic">+</span></summary><div class="ro-fans">Sí. Tu dominio, tu marca, tu contenido. Tú eres el dueño. Incluye tres revisiones grandes por WhatsApp; cambios adicionales se cobran aparte.</div></details><details class="ro-fitem"><summary>¿Estoy atado a algún contrato?<span class="ro-fic">+</span></summary><div class="ro-fans">No, sin permanencia. Si en algún momento quieres parar, cancelas cuando quieras — sin ataduras.</div></details><details class="ro-fitem"><summary>¿Por qué ahora y no después?<span class="ro-fic">+</span></summary><div class="ro-fans">Porque ya está hecho y no lo guardamos para siempre. En dos semanas liberamos el trabajo y la oferta desaparece.</div></details></div></div></div></div></section>
+<div id="ro-modal" role="dialog" aria-modal="true"><div class="ro-card"><button class="ro-x2" data-ro-close-modal aria-label="close">×</button><div class="ro-mhead"><div class="ro-mhead-txt"><h2>Se ve increíble,<br>¿verdad?</h2><p class="ro-mbody">Ya está hecho — es tu sitio, con tu marca, tus fotos y tus reseñas. Listo para salir en línea esta semana.</p></div><div class="ro-mimg"><img src="https://spaceship-hq.netlify.app/dentist.png" alt=""></div></div><div class="ro-rlabel">Opiniones sobre The Refresh Agency</div><div class="ro-reviews"><div class="ro-rev-track"><div class="ro-rev"><div class="ro-stars">★★★★★</div><p>“Nos entregaron la página en pocos días y quedó mejor de lo que esperábamos. Cero complicaciones.”</p><b>Andrés M. · Negocio local</b></div><div class="ro-rev"><div class="ro-stars">★★★★★</div><p>“El sitio se ve carísimo y ya nos está trayendo más clientes. Valió cada peso.”</p><b>Daniela R. · Clínica</b></div><div class="ro-rev"><div class="ro-stars">★★★★★</div><p>“Súper rápidos y atentos. Pedí cambios y los hicieron al instante por WhatsApp.”</p><b>Carlos V. · Restaurante</b></div><div class="ro-rev"><div class="ro-stars">★★★★★</div><p>“Más barato que cualquier agencia y mil veces más fácil. Lo recomiendo sin dudar.”</p><b>María José · Estética</b></div></div></div><div class="ro-dots"><span class="ro-dot on"></span><span class="ro-dot"></span><span class="ro-dot"></span><span class="ro-dot"></span></div><a class="ro-btn" href="#ro-oferta">Activar mi sitio ya →</a></div></div>
+<script id="ro-offer-js">(function(){var band=document.getElementById("ro-band"),modal=document.getElementById("ro-modal");function roUnstick(){var n=document.querySelectorAll("body *");for(var i=0;i<n.length;i++){var el=n[i];if(el.closest("#ro-band,#ro-modal,#ro-oferta"))continue;var cs=window.getComputedStyle(el);if(cs.position!=="fixed"&&cs.position!=="sticky")continue;var t=el.tagName.toLowerCase();var c=(el.className&&el.className.toString)?el.className.toString():"";if(t==="header"||t==="nav"||/head|nav|topbar|menu/i.test(c)){el.style.setProperty("position","static","important");el.style.setProperty("top","auto","important");}else{el.style.setProperty("display","none","important");}}}function roHeaderSolid(){var ks=["scrolled","is-scrolled","header-scrolled","header--scrolled","nav-scrolled","solid","is-solid","stuck","is-stuck"];var hs=document.querySelectorAll("header,#header,.site-header,[class*=navbar],[class*=nav-bar]");for(var i=0;i<hs.length;i++){(function(h){if(h.closest("#ro-band,#ro-modal,#ro-oferta"))return;var add=function(){for(var j=0;j<ks.length;j++)h.classList.add(ks[j]);};add();try{new MutationObserver(function(){if(!h.classList.contains("scrolled"))add();}).observe(h,{attributes:true,attributeFilter:["class"]});}catch(e){}})(hs[i]);}}roUnstick();roHeaderSolid();window.addEventListener("load",function(){roUnstick();roHeaderSolid();});setTimeout(function(){roUnstick();roHeaderSolid();},1500);function openModal(){if(modal){modal.classList.add("ro-open");document.body.style.overflow="hidden";}}function closeModal(){if(modal){modal.classList.remove("ro-open");document.body.style.overflow="";}}document.querySelectorAll("[data-ro-close-modal]").forEach(function(b){b.onclick=closeModal;});if(modal){modal.addEventListener("click",function(e){if(e.target===modal)closeModal();});}document.addEventListener("keydown",function(e){if(e.key==="Escape")closeModal();});var ri=0;var track=modal?modal.querySelector(".ro-rev-track"):null;var dots=modal?modal.querySelectorAll(".ro-dot"):[];var revs=modal?modal.querySelectorAll(".ro-rev"):[];function showRev(n){if(!revs.length)return;ri=(n+revs.length)%revs.length;if(track)track.style.transform="translateX(-"+(ri*100)+"%)";for(var k=0;k<dots.length;k++){dots[k].classList.toggle("on",k===ri);}}if(revs.length>1){setInterval(function(){showRev(ri+1);},3800);}var rt=document.getElementById("ro-rtrack");if(rt){var rc=rt.children,rn=rc.length/3,rcar=rt.parentNode,rg=16,rbase=rn,rIdx=rbase;function rGo(i,anim){if(!rc.length)return;var cw=rc[0].offsetWidth;var x=i*(cw+rg)+cw/2-rcar.clientWidth/2;rt.style.transition=anim?"transform .55s cubic-bezier(.4,0,.2,1)":"none";rt.style.transform="translateX("+(-x)+"px)";}rGo(rIdx,false);window.addEventListener("load",function(){rGo(rIdx,false);});setInterval(function(){rIdx++;rGo(rIdx,true);if(rIdx>=rbase+rn){setTimeout(function(){rIdx=rbase;rGo(rbase,false);},600);}},3200);window.addEventListener("resize",function(){rGo(rIdx,false);});}var bandHidden=false,modalOpen=false;window.addEventListener("scroll",function(){var h=document.body.scrollHeight-window.innerHeight;if(h<=0)return;var pct=window.scrollY/h;if(pct>=0.5){if(!modalOpen){modalOpen=true;openModal();}}else{if(modalOpen){modalOpen=false;closeModal();}}var of=document.getElementById("ro-oferta");if(of){var top=of.getBoundingClientRect().top;if(top<=window.innerHeight*0.8&&!bandHidden){bandHidden=true;band.style.animation="ro-band-up .4s ease forwards";}else if(top>window.innerHeight*0.8&&bandHidden){bandHidden=false;band.style.animation="ro-band-down .4s ease forwards";}}},{passive:true});})();</script>
+</body>
+</html>
