@@ -3,6 +3,16 @@
   command = ""
 
 [[redirects]]
-  from = "/onagos"
-  to = "/onagos/index.html"
+  from = "/hongos"
+  to = "/hongos.html"
   status = 200
+
+[[redirects]]
+  from = "/uña-encarnada"
+  to = "/una-encarnada.html"
+  status = 200
+
+[[redirects]]
+  from = "/onagos*"
+  to = "/"
+  status = 301

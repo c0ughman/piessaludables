@@ -1,0 +1,452 @@
+<!-- Design system: primary deep clinical teal #0F3D33; single CTA accent = WhatsApp green #25D366 (most eye-grabbing, CTAs only); neutrals #F6FAF7/#FFFFFF/#1C2B22. Fonts: Fraunces (warm, trustworthy display) + Mulish (clean clinical body). Conversion-first SITE for Pies Saludables — focus: hongos en las uñas (onicomicosis). ONE action: WhatsApp. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hongos en las Uñas en Panamá | Pies Saludables PTY — Tratamiento Clínico</title>
+<meta name="description" content="¿Uñas amarillas, gruesas o con hongos? En Pies Saludables PTY tratamos la onicomicosis de raíz, con esterilización por ozono y seguimiento hasta restaurar tu uña. San Francisco y Juan Díaz. Manda una foto por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0F3D33;      /* structural brand */
+  --primary-2:#13564A;    /* gradient partner */
+  --primary-d:#0A2A24;    /* footer / darkest */
+  --accent:#25D366;       /* the ONE CTA accent — WhatsApp only */
+  --accent-d:#1EBE5A;
+  --accent-soft:#7BE6A0;  /* light highlight on dark */
+  --ink:#1C2B22;
+  --mut:#5C6B63;
+  --bg:#F6FAF7;
+  --card:#FFFFFF;
+  --line:#E3ECE6;
+  --on-primary:#D9EBE4;
+  --on-primary-soft:#CFE6DC;
+  --chip:#E7F6EB;
+  --gold:#F2B705;
+  --warn-bg:#FFF4F2;
+  --warn:#B23B30;
+  --foot-mut:#9EBFB4;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Mulish',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:76px}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.13;font-weight:600;color:var(--primary)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 24px}
+.sec{padding:80px 0}
+.eyebrow{font-family:'Mulish';font-weight:800;letter-spacing:.13em;text-transform:uppercase;font-size:.77rem;color:var(--accent-d)}
+.shead{max-width:680px;margin:0 auto 46px;text-align:center}
+.shead h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-top:10px}
+.shead p{color:var(--mut);font-size:1.1rem;margin-top:14px}
+
+/* The ONE CTA */
+.wa{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:56px;padding:15px 30px;border-radius:12px;background:var(--accent);color:#fff;font-family:'Mulish';font-weight:800;font-size:1.05rem;border:none;cursor:pointer;box-shadow:0 10px 26px rgba(37,211,102,.34);transition:transform .18s,box-shadow .18s,background .18s}
+.wa:hover,.wa:focus{background:var(--accent-d);transform:translateY(-2px);box-shadow:0 14px 32px rgba(37,211,102,.46);outline:none}
+.wa svg{width:23px;height:23px;flex-shrink:0}
+
+/* Header (static) with anchor nav */
+.head{background:var(--bg);border-bottom:1px solid var(--line)}
+.head__in{display:flex;align-items:center;gap:18px;padding:14px 24px;max-width:1140px;margin:0 auto}
+.brand img{height:48px;width:auto}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{font-weight:700;font-size:.95rem;color:var(--ink);transition:color .15s}
+.nav a:hover{color:var(--accent-d)}
+.head .wa{min-height:46px;padding:11px 20px;font-size:.95rem}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;margin-left:auto}
+.burger span{width:25px;height:3px;background:var(--primary);border-radius:3px}
+
+/* Hero */
+.hero{position:relative;background:linear-gradient(150deg,var(--primary) 0%,var(--primary-2) 100%);color:#fff;overflow:hidden}
+.hero__grid{display:grid;grid-template-columns:1.07fr .93fr;gap:50px;align-items:center;padding:80px 0}
+.hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--accent-soft)}
+.hero__sub{margin:20px 0 28px;font-size:1.17rem;color:var(--on-primary);max-width:31em}
+.hero__pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.pill{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 14px;font-size:.85rem;font-weight:700;color:var(--on-primary)}
+.pill svg{width:16px;height:16px;color:var(--accent-soft)}
+.hero__media{position:relative}
+.hero__media img{border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.34);width:100%;height:450px;object-fit:cover}
+.hero__badge{position:absolute;left:-16px;bottom:24px;background:var(--card);color:var(--primary);border-radius:14px;padding:14px 18px;box-shadow:0 12px 34px rgba(15,61,51,.2);max-width:224px}
+.hero__badge b{font-family:'Fraunces';font-size:1rem;color:var(--accent-d);display:block}
+.hero__badge small{color:var(--mut);font-weight:600}
+
+/* Trust strip */
+.strip{background:var(--card);border-bottom:1px solid var(--line)}
+.strip__in{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:32px 0}
+.strip__it{text-align:center}
+.strip__ic{width:38px;height:38px;margin:0 auto;color:var(--accent-d)}
+.strip__it b{font-family:'Fraunces';font-size:1.02rem;color:var(--primary);display:block;margin-top:6px}
+.strip__it small{color:var(--mut);font-weight:600;font-size:.85rem}
+
+/* Problem */
+.prob{background:var(--card)}
+.prob__grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.prob img{border-radius:18px;height:400px;width:100%;object-fit:cover;box-shadow:0 12px 34px rgba(15,61,51,.14)}
+.prob h2{font-size:clamp(1.8rem,3.4vw,2.4rem);max-width:14em}
+.prob__lead{color:var(--mut);font-size:1.1rem;margin:14px 0 24px}
+.prob__list li{list-style:none;display:flex;gap:11px;align-items:flex-start;font-weight:600;color:var(--ink);margin-bottom:12px}
+.prob__list svg{width:21px;height:21px;color:var(--warn);flex-shrink:0;margin-top:3px}
+.prob__warn{margin-top:22px;background:var(--warn-bg);border-left:4px solid var(--warn);border-radius:10px;padding:14px 18px;color:var(--warn);font-weight:600}
+
+/* Services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc__c{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .2s,box-shadow .2s}
+.svc__c--lead{grid-column:span 2;background:linear-gradient(150deg,var(--primary),var(--primary-2));color:#fff;border:none}
+.svc__c--lead h3{color:#fff}.svc__c--lead p{color:var(--on-primary)}
+.svc__c:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(15,61,51,.12)}
+.svc__ic{width:48px;height:48px;border-radius:12px;background:var(--chip);color:var(--accent-d);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.svc__c--lead .svc__ic{background:rgba(255,255,255,.14);color:var(--accent-soft)}
+.svc__ic svg{width:26px;height:26px}
+.svc__c h3{font-size:1.2rem;margin-bottom:7px}
+.svc__c p{color:var(--mut);font-size:.98rem}
+.svc__also{margin-top:26px;text-align:center;color:var(--mut);font-size:.98rem}
+.svc__also b{color:var(--primary)}
+
+/* How it works */
+.how{background:var(--primary);color:#fff}
+.how .shead h2{color:#fff}.how .shead p{color:var(--on-primary-soft)}
+.how__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how__c{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:28px}
+.how__n{width:38px;height:38px;border-radius:10px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:700;font-size:1.15rem;margin-bottom:14px}
+.how__c h3{color:#fff;font-size:1.16rem;margin-bottom:8px}
+.how__c p{color:var(--on-primary);font-size:.99rem}
+.how__cta{text-align:center;margin-top:38px}
+
+/* Testimonials */
+.tst{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:22px}
+.tst__c{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 4px 18px rgba(15,61,51,.07);display:flex;flex-direction:column}
+.tst__c--feat{border:2px solid var(--accent-soft)}
+.stars{color:var(--gold);font-size:1.05rem;letter-spacing:2px;margin-bottom:13px}
+.tst__c p{font-size:1rem;color:var(--ink);flex:1}
+.tst__c--feat p{font-family:'Fraunces';font-size:1.16rem;line-height:1.45;font-weight:500}
+.tst__by{margin-top:18px;display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:15px}
+.tst__av{width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:600}
+.tst__by b{font-weight:800;color:var(--primary);font-family:'Mulish'}
+.tst__by small{color:var(--mut);display:block;font-weight:600}
+
+/* Gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:14px}
+.gal__a{grid-column:span 2;grid-row:span 2}
+
+/* Offer */
+.offer{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.offer__box{background:linear-gradient(150deg,var(--primary),var(--primary-2));color:#fff;border-radius:24px;padding:50px 40px;text-align:center;box-shadow:0 18px 50px rgba(15,61,51,.2)}
+.offer__box h2{color:#fff;font-size:clamp(1.8rem,3.6vw,2.5rem);max-width:18em;margin:0 auto 14px}
+.offer__box p{color:var(--on-primary);font-size:1.12rem;max-width:32em;margin:0 auto 26px}
+.offer__rr{margin-top:18px;color:var(--accent-soft);font-size:.95rem;font-weight:600}
+
+/* FAQ */
+.faq__grid{max-width:760px;margin:0 auto}
+.faq__c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin-bottom:14px}
+.faq__c h3{font-size:1.15rem;margin-bottom:8px;color:var(--primary)}
+.faq__c p{color:var(--mut)}
+.faq__c a{color:var(--accent-d);font-weight:800}
+.faq__c a:hover{text-decoration:underline}
+
+/* Location */
+.loc{background:var(--bg)}
+.loc__grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.loc__c{border:1px solid var(--line);border-radius:18px;padding:28px;background:var(--card)}
+.loc__c h3{font-size:1.28rem;margin-bottom:10px}
+.loc__c .row{display:flex;gap:10px;align-items:flex-start;color:var(--mut);font-weight:600;margin-bottom:10px}
+.loc__c .row svg{width:19px;height:19px;color:var(--accent-d);flex-shrink:0;margin-top:3px}
+.loc__c .wa{margin-top:8px;width:100%}
+
+/* Final */
+.final{background:linear-gradient(150deg,var(--accent),var(--accent-d));color:#fff;text-align:center}
+.final h2{color:#fff;font-size:clamp(1.9rem,4vw,2.7rem);max-width:16em;margin:0 auto 14px}
+.final p{color:#fff;opacity:.92;font-size:1.14rem;max-width:32em;margin:0 auto 28px}
+.final .wa{background:#fff;color:var(--accent-d);box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.final .wa:hover{background:#fff;color:var(--accent-d)}
+
+/* Footer */
+.foot{background:var(--primary-d);color:var(--on-primary-soft);padding:48px 0 28px}
+.foot__grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px;margin-bottom:28px}
+.foot__brand img{height:50px;margin-bottom:13px;filter:brightness(0) invert(1)}
+.foot__brand p{color:var(--foot-mut);font-size:.95rem;max-width:26em}
+.foot__also{color:var(--foot-mut);font-size:.9rem;margin-top:6px}
+.foot h4{color:#fff;font-size:1rem;margin-bottom:13px;font-family:'Mulish';font-weight:800}
+.foot a,.foot span{display:flex;align-items:center;gap:9px;color:var(--on-primary-soft);font-weight:600;margin-bottom:10px;width:fit-content;font-size:.95rem}
+.foot a:hover{color:var(--accent-soft)}
+.foot svg{width:17px;height:17px;flex-shrink:0}
+.foot__bot{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;color:var(--foot-mut);font-size:.86rem}
+
+/* Sticky mobile CTA */
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(246,250,247,.93);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px;display:none;box-shadow:0 -6px 20px rgba(15,61,51,.1)}
+.stick .wa{width:100%;min-height:52px}
+
+.rev{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+.rev.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero__grid,.prob__grid{grid-template-columns:1fr;gap:34px}
+  .hero__media img,.prob img{height:340px}
+  .strip__in{grid-template-columns:1fr 1fr;gap:26px}
+  .svc{grid-template-columns:1fr 1fr}.svc__c--lead{grid-column:span 2}
+  .how__grid{grid-template-columns:1fr}
+  .tst{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.gal__a{grid-column:span 2;grid-row:span 1}
+  .loc__grid{grid-template-columns:1fr}
+  .foot__grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  body{font-size:16px;padding-bottom:78px}
+  .sec{padding:54px 0}.wrap{padding:0 18px}
+  .nav{display:none}.head .wa{display:none}.burger{display:flex}
+  .stick{display:block}
+  .svc,.strip__in,.foot__grid{grid-template-columns:1fr}.svc__c--lead{grid-column:span 1}
+  .hero__media img{height:280px}.hero__badge{left:0;max-width:200px}
+  .offer__box{padding:36px 22px}
+  .wa{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="head__in">
+    <a class="brand" href="#inicio" aria-label="Pies Saludables PTY"><img src="https://piessaludables.com.pa/wp-content/uploads/2024/04/Logo-Pies-Saludables_v2.png" alt="Pies Saludables PTY"></a>
+    <nav class="nav" id="nav">
+      <a href="#servicios">Tratamiento</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#ubicacion">Sucursales</a>
+    </nav>
+    <a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20tengo%20hongos%20en%20las%20u%C3%B1as%20y%20quiero%20agendar%20una%20valoraci%C3%B3n." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"/></svg>
+      Escribir por WhatsApp
+    </a>
+    <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="rev in">
+        <span class="eyebrow" style="color:var(--accent-soft)">Pies Saludables PTY · Clínica #1 de quiropedia en Panamá</span>
+        <h1>¿Uñas con hongos que <em>te dan pena</em>?</h1>
+        <p class="hero__sub">Tratamos la onicomicosis de raíz —no con cremas que no sirven— para que recuperes uñas limpias y vuelvas a usar sandalias sin esconder los pies. Con esterilización total por ozono.</p>
+        <a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20tengo%20hongos%20en%20las%20u%C3%B1as%20y%20quiero%20agendar%20una%20valoraci%C3%B3n." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"/></svg>
+          Mandar foto y agendar
+        </a>
+        <div class="hero__pills">
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg> Ataca la causa, no el síntoma</span>
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg> Esterilización por ozono</span>
+        </div>
+      </div>
+      <div class="hero__media rev in">
+        <img src="https://piessaludables.com.pa/wp-content/uploads/2024/05/professional-medical-pedicure-procedure-while-doct-2023-11-27-04-57-44-utc-Mediana-1024x683.jpg" alt="Tratamiento clínico de hongos en las uñas en Pies Saludables PTY">
+        <div class="hero__badge"><b>Uñas restauradas</b><small>Seguimiento hasta que tu uña vuelve a verse sana</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="strip">
+  <div class="wrap"><div class="strip__in">
+    <div class="strip__it"><div class="strip__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div><b>Esterilización por ozono</b><small>Sin riesgo de reinfección</small></div>
+    <div class="strip__it"><div class="strip__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12a4 4 0 008 0"/></svg></div><b>Tratamiento técnico-clínico</b><small>No es estética, es salud</small></div>
+    <div class="strip__it"><div class="strip__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></div><b>San Francisco y Juan Díaz</b><small>Dos sucursales en la ciudad</small></div>
+    <div class="strip__it"><div class="strip__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><b>Todos los días</b><small>9:00 am – 7:00 pm</small></div>
+  </div></div>
+</section>
+
+<!-- PROBLEM -->
+<section class="prob sec">
+  <div class="wrap"><div class="prob__grid">
+    <img class="rev" src="https://piessaludables.com.pa/wp-content/uploads/2024/04/pies-sanos-scaled-2-1024x682.jpg" alt="Uñas sanas después del tratamiento de hongos">
+    <div class="rev">
+      <span class="eyebrow" style="color:var(--warn)">Si lo dejas pasar, se extiende</span>
+      <h2>El hongo no se va con cremas — y mientras tanto avanza</h2>
+      <p class="prob__lead">La onicomicosis se mete bajo la uña: por eso los esmaltes y cremas no llegan a la raíz. Cada mes que pasa, la uña se pone más amarilla, gruesa y quebradiza, y puede contagiar a las demás uñas y a tu familia.</p>
+      <ul class="prob__list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg> Uñas amarillas, gruesas o quebradizas.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg> Te da pena usar sandalias o que te vean los pies.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg> Ya probaste cremas y esmaltes y no funcionó.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg> Tienes miedo de contagiar a tu familia.</li>
+      </ul>
+      <div class="prob__warn">Tratarlo a tiempo es más rápido y más barato que cuando ya afectó varias uñas.</div>
+    </div>
+  </div></div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="servicios">
+  <div class="wrap">
+    <div class="shead rev"><span class="eyebrow">Nuestro tratamiento</span><h2>Atacamos el hongo donde de verdad está</h2><p>Un protocolo clínico para la salud integral de tus uñas y tu piel — no una solución temporal.</p></div>
+    <div class="svc">
+      <div class="svc__c svc__c--lead rev">
+        <div class="svc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12a4 4 0 008 0"/></svg></div>
+        <h3>Hongos en las uñas (Onicomicosis)</h3>
+        <p>Rebajamos y tratamos la uña afectada para que el tratamiento llegue a la raíz del hongo, y damos seguimiento hasta que la uña vuelve a crecer sana y restaurada por completo.</p>
+      </div>
+      <div class="svc__c rev">
+        <div class="svc__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13c0-4 3-7 7-7s7 3 7 7"/><path d="M3 13h18M8 17h8"/></svg></div>
+        <h3>Hongos plantares</h3>
+        <p>Tratamos la hiperqueratosis y los hongos de la planta del pie que provocan picazón, mal olor y descamación.</p>
+      </div>
+    </div>
+    <p class="svc__also rev"><b>También en Pies Saludables:</b> uñas encarnadas · callos · verrugas plantares · atención al diabético · hidroterapia.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how sec">
+  <div class="wrap">
+    <div class="shead rev"><span class="eyebrow" style="color:var(--accent-soft)">Cómo lo resolvemos</span><h2>Tres pasos hasta tus uñas sanas</h2></div>
+    <div class="how__grid">
+      <div class="how__c rev"><div class="how__n">1</div><h3>Valoración con foto</h3><p>Nos mandas una foto por WhatsApp o vienes a consulta. Revisamos el hongo, su avance, y te explicamos el tratamiento y el costo, claro y sin rodeos.</p></div>
+      <div class="how__c rev"><div class="how__n">2</div><h3>Tratamiento clínico</h3><p>Rebajamos y tratamos la uña con instrumental esterilizado por ozono, para que el tratamiento ataque la raíz del hongo y no vuelva a contagiarse.</p></div>
+      <div class="how__c rev"><div class="how__n">3</div><h3>Seguimiento hasta el alta</h3><p>Controlamos cómo crece tu uña nueva hasta que se ve sana y restaurada. Te damos de alta cuando el problema está resuelto.</p></div>
+    </div>
+    <div class="how__cta rev"><a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20quiero%20una%20valoraci%C3%B3n%20para%20mis%20u%C3%B1as%20con%20hongos." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"/></svg>
+      Empezar mi tratamiento</a></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec" id="resultados">
+  <div class="wrap">
+    <div class="shead rev"><span class="eyebrow">Pacientes reales</span><h2>Personas que volvieron a mostrar sus pies</h2></div>
+    <div class="tst">
+      <div class="tst__c tst__c--feat rev">
+        <div class="stars">★★★★★</div>
+        <p>"Mis uñas no se veían bien, me había contagiado de hongos y no usaba sandalias por pena. Llevo unos 6 meses en tratamiento y mis uñas se ven bien. Sigo yendo a Pies Saludables porque me agrada su profesionalismo y los masajes que recibo en mis pies."</p>
+        <div class="tst__by"><div class="tst__av">MH</div><div><b>Marisol Hernández</b><small>Paciente de hongos · Reseña de Google</small></div></div>
+      </div>
+      <div class="tst__c rev">
+        <div class="stars">★★★★★</div>
+        <p>"Creía que lo mío no tenía solución. Me recomendaron Pies Saludables y no pensé que iba a sanar tan rápido. Ahora gozo de una buena calidad de vida en mis pies."</p>
+        <div class="tst__by"><div class="tst__av">JÁ</div><div><b>Josefina Álvarez</b><small>Reseña de Google</small></div></div>
+      </div>
+      <div class="tst__c rev">
+        <div class="stars">★★★★★</div>
+        <p>"Me diagnosticaron bien, llevé mi seguimiento y después de unos meses me dieron de alta sin dolor. Totalmente recomendados."</p>
+        <div class="tst__by"><div class="tst__av">JL</div><div><b>José Lartiga</b><small>Reseña de Google</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap"><div class="gal rev">
+    <img class="gal__a" src="https://piessaludables.com.pa/wp-content/uploads/2024/05/professional-medical-pedicure-procedure-while-doct-2023-11-27-04-57-44-utc-Mediana-1024x683.jpg" alt="Procedimiento clínico de uñas">
+    <img src="https://piessaludables.com.pa/wp-content/uploads/2024/04/pies-sanos-scaled-2-1024x682.jpg" alt="Uñas sanas tras el tratamiento">
+    <img src="https://piessaludables.com.pa/wp-content/uploads/2024/04/Cuidado-pies-744x465-1.jpg" alt="Cuidado profesional del pie">
+    <img src="https://piessaludables.com.pa/wp-content/uploads/2024/04/pies-piscina.jpg-1024x768.webp" alt="Pies sanos y cuidados">
+    <img src="https://piessaludables.com.pa/wp-content/uploads/2024/04/pies-sanos-scaled-1-1024x684.jpg" alt="Resultado del tratamiento de hongos">
+  </div></div>
+</section>
+
+<!-- OFFER -->
+<section class="offer sec">
+  <div class="wrap rev">
+    <div class="offer__box">
+      <span class="eyebrow" style="color:var(--accent-soft)">Tu primer paso</span>
+      <h2>Mándanos una foto de tus uñas y te decimos qué tienes</h2>
+      <p>Sin salir de casa: envíanos una foto por WhatsApp. Te decimos si es hongo, qué tan avanzado está y cómo lo tratamos — antes de que decidas nada.</p>
+      <a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20les%20mando%20una%20foto%20de%20mis%20u%C3%B1as%20con%20hongos%20para%20que%20me%20digan%20qu%C3%A9%20tengo%20y%20c%C3%B3mo%20tratarlo." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"/></svg>
+        Enviar foto por WhatsApp
+      </a>
+      <div class="offer__rr">Sin compromiso · Respondemos el mismo día · Lun a Dom 9am–7pm</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="shead rev"><span class="eyebrow">Antes de escribirnos</span><h2>Lo que más nos preguntan</h2></div>
+    <div class="faq__grid">
+      <div class="faq__c rev"><h3>Ya probé cremas y esmaltes, ¿esto es distinto?</h3><p>Sí. El hongo vive bajo la uña, donde las cremas no llegan. Rebajamos y tratamos la uña para atacar la raíz, por eso funciona cuando lo de farmacia no. <a href="https://wa.me/50767476568?text=Hola%2C%20ya%20prob%C3%A9%20cremas%20para%20el%20hongo%20y%20no%20funcion%C3%B3%2C%20%C2%BFme%20pueden%20ayudar%3F" target="_blank" rel="noopener">Cuéntanos tu caso →</a></p></div>
+      <div class="faq__c rev"><h3>¿Es higiénico? ¿Me puedo recontagiar?</h3><p>Esterilizamos todo el instrumental por ozono en cada procedimiento, justamente para que no haya reinfección. <a href="https://wa.me/50767476568?text=Hola%2C%20quiero%20agendar%20el%20tratamiento%20de%20hongos%20en%20mis%20u%C3%B1as." target="_blank" rel="noopener">Agenda con confianza →</a></p></div>
+      <div class="faq__c rev"><h3>¿Cuánto tarda en verse bien?</h3><p>Depende de cuánto avanzó el hongo: la uña sana crece poco a poco con seguimiento. Marisol, por ejemplo, vio sus uñas restauradas con tratamiento y control. <a href="https://wa.me/50767476568?text=Hola%2C%20quiero%20saber%20cu%C3%A1nto%20tarda%20el%20tratamiento%20de%20hongos." target="_blank" rel="noopener">Pregunta por tu caso →</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="loc sec" id="ubicacion">
+  <div class="wrap">
+    <div class="shead rev"><span class="eyebrow">Visítanos</span><h2>Dos sucursales para atenderte</h2><p>Abierto todos los días, de 9:00 am a 7:00 pm.</p></div>
+    <div class="loc__grid">
+      <div class="loc__c rev">
+        <h3>San Francisco</h3>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg> San Francisco, Ciudad de Panamá</div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Lun a Dom · 9:00 am – 7:00 pm</div>
+        <a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20quiero%20agendar%20por%20hongos%20en%20la%20sucursal%20de%20San%20Francisco." target="_blank" rel="noopener">Agendar en San Francisco</a>
+      </div>
+      <div class="loc__c rev">
+        <h3>Juan Díaz</h3>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg> Juan Díaz, Ciudad de Panamá</div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Lun a Dom · 9:00 am – 7:00 pm</div>
+        <a class="wa" href="https://wa.me/50767393928?text=Hola%2C%20quiero%20agendar%20por%20hongos%20en%20la%20sucursal%20de%20Juan%20D%C3%ADaz." target="_blank" rel="noopener">Agendar en Juan Díaz</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:24px" class="rev"><a href="https://www.google.com/maps/search/?api=1&query=Pies+Saludables+PTY+Panama" target="_blank" rel="noopener" style="color:var(--accent-d);font-weight:800">Ver en Google Maps →</a></div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final sec">
+  <div class="wrap rev">
+    <h2>Vuelve a usar sandalias sin pena</h2>
+    <p>Un mensaje y una foto bastan para empezar. Te respondemos hoy.</p>
+    <a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20quiero%20tratar%20mis%20u%C3%B1as%20con%20hongos.%20%C2%BFCu%C3%A1ndo%20pueden%20atenderme%3F" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"/></svg>
+      Escribir por WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <img src="https://piessaludables.com.pa/wp-content/uploads/2024/04/Logo-Pies-Saludables_v2.png" alt="Pies Saludables PTY">
+        <p>Clínica #1 de quiropedia en Panamá. Tratamiento clínico de hongos en las uñas con esterilización total por ozono.</p>
+        <p class="foot__also">También: uñas encarnadas · callos · verrugas plantares · atención al diabético.</p>
+      </div>
+      <div>
+        <h4>Visítanos</h4>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/></svg> San Francisco y Juan Díaz</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Lun a Dom · 9am – 7pm</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Pies+Saludables+PTY+Panama" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg> Cómo llegar</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="https://wa.me/50767476568?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20tratamiento%20de%20hongos." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg> WhatsApp: 6747-6568</a>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> Tel: 6747-6568 / 6739-3928</span>
+      </div>
+    </div>
+    <div class="foot__bot">© 2026 Pies Saludables PTY · Clínica de quiropedia · Ciudad de Panamá</div>
+  </div>
+</footer>
+
+<div class="stick">
+  <a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20tengo%20hongos%20en%20las%20u%C3%B1as%20y%20quiero%20agendar%20una%20valoraci%C3%B3n." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"/></svg>
+    Mandar foto de mis uñas por WhatsApp
+  </a>
+</div>
+
+<script>
+const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+if(burger)burger.addEventListener('click',()=>{const open=nav.style.display==='flex';nav.style.display=open?'none':'flex';nav.style.position='absolute';nav.style.flexDirection='column';nav.style.background='var(--bg)';nav.style.top='72px';nav.style.left='0';nav.style.right='0';nav.style.padding='10px 18px';nav.style.borderBottom='1px solid var(--line)';nav.style.zIndex='40';});
+nav&&nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<=600)nav.style.display='none';}));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

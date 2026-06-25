@@ -1,0 +1,320 @@
+<!-- Design system: Primary deep clinical teal #0F3D33 (calm trust/structure); single accent = WhatsApp green #25D366 reserved ONLY for the one CTA (most prominent element everywhere); neutrals #F6FAF7 / #FFFFFF / #1C2B22. Fonts: 'Fraunces' (warm, human, trust) + 'Mulish' (clean clinical body). Funnel: ONE service (uña encarnada) → ONE action (WhatsApp). -->
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Uña Encarnada en Panamá | Pies Saludables PTY — Sin dolor, sin cirugía traumática</title>
+<meta content="¿Uña encarnada que te duele al caminar? En Pies Saludables PTY tratamos la onicocriptosis de raíz, sin cirugía traumática y con esterilización por ozono. Escríbenos por WhatsApp y agenda tu valoración." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Mulish:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --teal:#0F3D33;--teal-d:#0A2A24;
+  --wa: #25D366;--wa-d:#1EBE5A;   /* the one accent — WhatsApp CTA only */
+  --ink:#1C2B22;--mut:#5C6B63;--bg:#F6FAF7;--card:#FFFFFF;--line:#E3ECE6;
+  --shadow:0 10px 40px rgba(15,61,51,.12);--shadow-sm:0 4px 18px rgba(15,61,51,.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Mulish',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:76px}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.13;font-weight:600;color:var(--teal)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1060px;margin:0 auto;padding:0 22px}
+.sec{padding:72px 0}
+.eyebrow{font-family:'Mulish';font-weight:800;letter-spacing:.13em;text-transform:uppercase;font-size:.76rem;color:var(--wa-d)}
+
+/* The ONE CTA */
+.wa{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:56px;padding:15px 30px;border-radius:12px;background:var(--wa);color:#fff;font-family:'Mulish';font-weight:800;font-size:1.06rem;border:none;cursor:pointer;box-shadow:0 10px 26px rgba(37,211,102,.36);transition:transform .18s,box-shadow .18s,background .18s}
+.wa:hover,.wa:focus{background:var(--wa-d);transform:translateY(-2px);box-shadow:0 14px 32px rgba(37,211,102,.46);outline:none}
+.wa svg{width:23px;height:23px;flex-shrink:0}
+.wa--sm{min-height:48px;padding:12px 22px;font-size:.98rem}
+
+/* Header */
+.head{background:var(--bg);border-bottom:1px solid var(--line)}
+.head__in{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 22px;max-width:1060px;margin:0 auto}
+.brand img{height:48px;width:auto}
+.head .wa{min-height:46px;padding:11px 20px;font-size:.96rem}
+
+/* Hero */
+.hero{position:relative;background:linear-gradient(150deg,#0F3D33 0%,#13564A 100%);color:#fff;overflow:hidden}
+.hero__grid{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;padding:76px 0}
+.hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:#7BE6A0}
+.hero__sub{margin:20px 0 28px;font-size:1.16rem;color:#D9EBE4;max-width:30em}
+.hero__pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.pill{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 14px;font-size:.86rem;font-weight:700;color:#EAF6F0}
+.pill svg{width:16px;height:16px;color:#7BE6A0}
+.hero__media{position:relative}
+.hero__media img{border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.34);width:100%;height:440px;object-fit:cover}
+.hero__badge{position:absolute;left:-16px;bottom:24px;background:#fff;color:var(--teal);border-radius:14px;padding:14px 18px;box-shadow:var(--shadow);max-width:218px}
+.hero__badge b{font-family:'Fraunces';font-size:1rem;color:var(--wa-d);display:block}
+.hero__badge small{color:var(--mut);font-weight:600}
+
+/* Pain */
+.pain{background:var(--card);border-bottom:1px solid var(--line)}
+.pain h2{font-size:clamp(1.7rem,3.4vw,2.4rem);max-width:16em}
+.pain__lead{color:var(--mut);font-size:1.12rem;margin:14px 0 30px;max-width:34em}
+.pain__list{display:grid;grid-template-columns:1fr 1fr;gap:14px 30px;max-width:760px}
+.pain__list li{list-style:none;display:flex;gap:11px;align-items:flex-start;font-weight:600;color:var(--ink)}
+.pain__list svg{width:22px;height:22px;color:#D9534F;flex-shrink:0;margin-top:3px}
+.pain__warn{margin-top:28px;background:#FFF4F2;border-left:4px solid #D9534F;border-radius:10px;padding:16px 20px;color:#8A2B25;font-weight:600;max-width:600px}
+
+/* Solution */
+.sol{background:var(--teal);color:#fff}
+.sol .eyebrow{color:#7BE6A0}
+.sol h2{color:#fff;font-size:clamp(1.7rem,3.4vw,2.4rem);max-width:15em;margin:8px 0 12px}
+.sol__intro{color:#CFE6DC;font-size:1.1rem;max-width:34em;margin-bottom:34px}
+.sol__steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:36px}
+.sol__c{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:16px;padding:24px}
+.sol__n{width:38px;height:38px;border-radius:10px;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:700;font-size:1.15rem;margin-bottom:14px}
+.sol__c h3{color:#fff;font-size:1.14rem;margin-bottom:7px}
+.sol__c p{color:#D9EBE4;font-size:.98rem}
+
+/* Proof */
+.proof{background:var(--bg)}
+.proof__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.qt{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:var(--shadow)}
+.qt .stars{color:#F2B705;font-size:1.15rem;letter-spacing:3px;margin-bottom:16px}
+.qt p{font-family:'Fraunces';font-size:1.32rem;line-height:1.45;color:var(--ink);font-weight:500}
+.qt__by{margin-top:22px;display:flex;align-items:center;gap:13px;border-top:1px solid var(--line);padding-top:18px}
+.qt__av{width:48px;height:48px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:600}
+.qt__by b{font-weight:800;color:var(--teal);font-family:'Mulish'}
+.qt__by small{color:var(--mut);display:block;font-weight:600}
+.proof__side h2{font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:18px}
+.proof__side li{list-style:none;display:flex;gap:11px;align-items:flex-start;margin-bottom:14px;font-weight:600;color:var(--ink)}
+.proof__side svg{width:22px;height:22px;color:var(--wa-d);flex-shrink:0;margin-top:2px}
+
+/* Offer */
+.offer{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.offer__box{background:linear-gradient(150deg,#0F3D33,#14584B);color:#fff;border-radius:24px;padding:48px 40px;text-align:center;box-shadow:var(--shadow)}
+.offer__box h2{color:#fff;font-size:clamp(1.8rem,3.6vw,2.5rem);max-width:18em;margin:0 auto 14px}
+.offer__box p{color:#D9EBE4;font-size:1.12rem;max-width:30em;margin:0 auto 26px}
+.offer__rr{margin-top:18px;color:#9FD8C2;font-size:.95rem;font-weight:600}
+
+/* FAQ */
+.faq__grid{max-width:760px;margin:0 auto}
+.faq__c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin-bottom:14px}
+.faq__c h3{font-size:1.16rem;margin-bottom:8px;color:var(--teal)}
+.faq__c p{color:var(--mut)}
+.faq__c a{color:var(--wa-d);font-weight:800}
+.faq__c a:hover{text-decoration:underline}
+
+/* Final */
+.final{background:linear-gradient(150deg,#25D366,#17A94C);color:#fff;text-align:center}
+.final h2{color:#fff;font-size:clamp(1.9rem,4vw,2.7rem);max-width:16em;margin:0 auto 14px}
+.final p{color:#EAFBEF;font-size:1.14rem;max-width:32em;margin:0 auto 28px}
+.final .wa{background:#fff;color:var(--wa-d);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.final .wa:hover{background:#F0FFF5;color:var(--wa-d)}
+
+/* Footer */
+.foot{background:var(--teal-d);color:#CFE6DC;padding:46px 0 28px}
+.foot__grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px;margin-bottom:28px}
+.foot__brand img{height:50px;margin-bottom:13px;filter:brightness(0) invert(1)}
+.foot__brand p{color:#9EBFB4;font-size:.94rem;max-width:26em}
+.foot h4{color:#fff;font-size:1rem;margin-bottom:13px;font-family:'Mulish';font-weight:800}
+.foot a,.foot span{display:flex;align-items:center;gap:9px;color:#CFE6DC;font-weight:600;margin-bottom:10px;width:fit-content;font-size:.95rem}
+.foot a:hover{color:#7BE6A0}
+.foot svg{width:17px;height:17px;flex-shrink:0}
+.foot__also{color:#7FA295;font-size:.9rem;margin-top:6px}
+.foot__bot{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;color:#7FA295;font-size:.86rem}
+
+/* Sticky mobile WhatsApp bar */
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(246,250,247,.92);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px;display:none;box-shadow:0 -6px 20px rgba(15,61,51,.1)}
+.stick .wa{width:100%;min-height:52px}
+
+/* Reveal */
+.rev{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+.rev.in{opacity:1;transform:none}
+
+@media(max-width:880px){
+  .hero__grid,.proof__grid{grid-template-columns:1fr;gap:34px}
+  .hero__media img{height:340px}
+  .sol__steps{grid-template-columns:1fr}
+  .pain__list{grid-template-columns:1fr}
+  .foot__grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  body{font-size:16px;padding-bottom:78px}
+  .sec{padding:52px 0}
+  .head .wa{display:none}              /* sticky bar carries the action on mobile */
+  .stick{display:block}
+  .hero__media img{height:280px}
+  .hero__badge{left:0;max-width:200px}
+  .offer__box{padding:36px 22px}
+  .foot__grid{grid-template-columns:1fr}
+  .wa{width:100%}
+}
+</style>
+</head>
+<body>
+<!-- HEADER: logo + the ONE CTA. No nav links (zero leaks). -->
+<header class="head">
+<div class="head__in">
+<a aria-label="Pies Saludables PTY" class="brand" href="#"><img alt="Pies Saludables PTY" src="https://piessaludables.com.pa/wp-content/uploads/2024/04/Logo-Pies-Saludables_v2.png"/></a>
+<a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20tengo%20una%20u%C3%B1a%20encarnada%20que%20me%20duele%20y%20quiero%20agendar%20una%20valoraci%C3%B3n." rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"></path></svg>
+      Escribir por WhatsApp
+    </a>
+</div>
+</header>
+<!-- HERO -->
+<section class="hero">
+<div class="wrap">
+<div class="hero__grid">
+<div class="rev in">
+<span class="eyebrow" style="color:#7BE6A0">Pies Saludables PTY · Clínica de quiropedia</span>
+<h1>¿Uña encarnada que <em>no te deja caminar</em>?</h1>
+<p class="hero__sub">La tratamos de raíz —sin cirugía traumática y con esterilización total por ozono— para que vuelvas a usar tus zapatos sin dolor. En San Francisco y Juan Díaz.</p>
+<a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20tengo%20una%20u%C3%B1a%20encarnada%20que%20me%20duele%20y%20quiero%20agendar%20una%20valoraci%C3%B3n." rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"></path></svg>
+          Quiero dejar de sufrir — escribir ahora
+        </a>
+<div class="hero__pills">
+<span class="pill"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12l4 4L19 6"></path></svg> Sin cirugía traumática</span>
+<span class="pill"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"></path></svg> Esterilización por ozono</span>
+<span class="pill"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"></path></svg> 2 sucursales en la ciudad</span>
+</div>
+</div>
+<div class="hero__media rev in">
+<img alt="Tratamiento clínico de uña encarnada en Pies Saludables PTY" src="https://piessaludables.com.pa/wp-content/uploads/2024/05/professional-medical-pedicure-procedure-while-doct-2023-11-27-04-57-44-utc-Mediana-1024x683.jpg"/>
+<div class="hero__badge"><b>Alivio desde la 1.ª sesión</b><small>Corregimos la causa, no solo el síntoma</small></div>
+</div>
+</div>
+</div>
+</section>
+<!-- PAIN / COST OF WAITING -->
+<section class="pain sec">
+<div class="wrap rev">
+<span class="eyebrow" style="color:#D9534F">Si llevas días así, lee esto</span>
+<h2>Cada día con la uña encarnada, el dolor —y el riesgo— crecen</h2>
+<p class="pain__lead">No es "algo que se pasa solo". Una onicocriptosis mal tratada se inflama, se infecta y termina necesitando un procedimiento más grande. ¿Te suena alguno de estos?</p>
+<ul class="pain__list">
+<li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> Te duele al caminar y al ponerte zapatos cerrados.</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> Intentaste cortarla en casa y empeoró.</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> El dedo está rojo, hinchado o supura.</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> Te da pena enseñar el pie en sandalias.</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> Tienes miedo de que te tengan que operar.</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> Ya vuelve por segunda o tercera vez.</li>
+</ul>
+<div class="pain__warn">Mientras más esperas, más se inflama y más se complica el tratamiento. Atacarla a tiempo es rápido, seguro y mucho más cómodo.</div>
+</div>
+</section>
+<!-- SOLUTION / MECHANISM -->
+<section class="sol sec">
+<div class="wrap rev">
+<span class="eyebrow">Cómo la resolvemos</span>
+<h2>Tratamiento clínico que ataca la causa real: el mal recorte</h2>
+<p class="sol__intro">No es estética: es un procedimiento técnico-clínico. Diagnosticamos por qué se encarnó, lo corregimos y te acompañamos hasta darte de alta.</p>
+<div class="sol__steps">
+<div class="sol__c"><div class="sol__n">1</div><h3>Valoración y diagnóstico</h3><p>Revisamos tu uña, identificamos la causa (casi siempre un mal recorte) y te explicamos el tratamiento y el costo, claro y sin rodeos.</p></div>
+<div class="sol__c"><div class="sol__n">2</div><h3>Recorte clínico y alivio</h3><p>Realizamos el recorte adecuado con instrumental esterilizado por ozono. Sientes alivio desde la primera sesión, sin cirugía traumática.</p></div>
+<div class="sol__c"><div class="sol__n">3</div><h3>Seguimiento hasta el alta</h3><p>Controlamos tu evolución para que la uña crezca sana y no vuelva a encarnarse. Te damos de alta cuando estás bien.</p></div>
+</div>
+<a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20quiero%20una%20valoraci%C3%B3n%20para%20mi%20u%C3%B1a%20encarnada.%20%C2%BFCu%C3%A1ndo%20pueden%20atenderme%3F" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"></path></svg>
+      Agendar mi valoración por WhatsApp
+    </a>
+</div>
+</section>
+<!-- PROOF -->
+<section class="proof sec">
+<div class="wrap">
+<div class="proof__grid">
+<div class="qt rev">
+<div class="stars">★★★★★</div>
+<p>"Sufría mucho con mis uñas encarnadas. Me diagnosticaron que la causa era por mal recorte, me hicieron el recorte adecuado y llevé mi seguimiento. Después de nueve meses ya no siento incomodidad ni dolor y me dieron de alta. Recomendados."</p>
+<div class="qt__by"><div class="qt__av">JL</div><div><b>José Lartiga</b><small>Paciente de uña encarnada · Reseña de Google</small></div></div>
+</div>
+<div class="proof__side rev">
+<h2>Por qué confían en nosotros</h2>
+<ul>
+<li><svg fill="none" stroke="currentColor" stroke-width="2.3" viewbox="0 0 24 24"><path d="M5 12l4 4L19 6"></path></svg> Clínica #1 en quiropedia en Panamá</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="2.3" viewbox="0 0 24 24"><path d="M5 12l4 4L19 6"></path></svg> Esterilización total por ozono en cada procedimiento</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="2.3" viewbox="0 0 24 24"><path d="M5 12l4 4L19 6"></path></svg> Diagnóstico de la causa, no solo del síntoma</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="2.3" viewbox="0 0 24 24"><path d="M5 12l4 4L19 6"></path></svg> Seguimiento real hasta darte de alta</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- OFFER -->
+<section class="offer sec">
+<div class="wrap rev">
+<div class="offer__box">
+<span class="eyebrow" style="color:#7BE6A0">Tu primer paso</span>
+<h2>Escríbenos y te decimos exactamente qué tiene tu uña</h2>
+<p>Cuéntanos por WhatsApp qué sientes y agenda tu valoración. Te explicamos el tratamiento y el costo antes de que decidas nada.</p>
+<a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20para%20mi%20u%C3%B1a%20encarnada." rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"></path></svg>
+        Escribir por WhatsApp ahora
+      </a>
+<div class="offer__rr">Sin compromiso · Abierto todos los días, 9:00 am – 7:00 pm</div>
+</div>
+</div>
+</section>
+<!-- OBJECTIONS -->
+<section class="sec">
+<div class="wrap">
+<div class="rev" style="text-align:center;max-width:620px;margin:0 auto 40px">
+<span class="eyebrow">Antes de escribirnos</span>
+<h2 style="font-size:clamp(1.7rem,3.4vw,2.3rem);margin-top:8px">Lo que más nos preguntan</h2>
+</div>
+<div class="faq__grid">
+<div class="faq__c rev"><h3>¿Me van a operar? ¿Duele?</h3><p>En la gran mayoría de los casos NO es cirugía. Hacemos un recorte clínico que alivia desde la primera sesión. <a href="https://wa.me/50767476568?text=Hola%2C%20quiero%20saber%20si%20mi%20u%C3%B1a%20encarnada%20necesita%20cirug%C3%ADa." rel="noopener" target="_blank">Cuéntanos tu caso por WhatsApp →</a></p></div>
+<div class="faq__c rev"><h3>¿Es higiénico y seguro?</h3><p>Sí. Esterilizamos todo el instrumental por ozono en cada procedimiento: limpieza, desinfección y esterilización. <a href="https://wa.me/50767476568?text=Hola%2C%20quiero%20agendar%20mi%20uña%20encarnada%20con%20ustedes." rel="noopener" target="_blank">Agenda con confianza →</a></p></div>
+<div class="faq__c rev"><h3>¿Se resuelve de verdad o vuelve?</h3><p>Atacamos la causa (el mal recorte) y te damos seguimiento hasta el alta, para que no vuelva a encarnarse. <a href="https://wa.me/50767476568?text=Hola%2C%20mi%20u%C3%B1a%20encarnada%20ya%20volvi%C3%B3%2C%20quiero%20resolverla%20bien." rel="noopener" target="_blank">Escríbenos →</a></p></div>
+</div>
+</div>
+</section>
+<!-- FINAL CTA -->
+<section class="final sec">
+<div class="wrap rev">
+<h2>Vuelve a caminar sin dolor esta semana</h2>
+<p>Un mensaje es todo lo que separa tu uña encarnada de una solución. Te respondemos hoy.</p>
+<a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20para%20mi%20u%C3%B1a%20encarnada%20esta%20semana." rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"></path></svg>
+      Escribir por WhatsApp
+    </a>
+</div>
+</section>
+<!-- FOOTER -->
+<footer class="foot">
+<div class="wrap">
+<div class="foot__grid">
+<div class="foot__brand">
+<img alt="Pies Saludables PTY" src="https://piessaludables.com.pa/wp-content/uploads/2024/04/Logo-Pies-Saludables_v2.png"/>
+<p>Clínica #1 de quiropedia en Panamá. Tratamiento clínico de uña encarnada con esterilización total por ozono.</p>
+<p class="foot__also">También tratamos: hongos en uñas, callos, verrugas plantares y atención al diabético.</p>
+</div>
+<div>
+<h4>Visítanos</h4>
+<span><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"></path></svg> San Francisco y Juan Díaz</span>
+<span><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg> Lun a Dom · 9:00 am – 7:00 pm</span>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Pies+Saludables+PTY+Panama" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"></path><circle cx="12" cy="11" r="2.5"></circle></svg> Cómo llegar (Google Maps)</a>
+</div>
+<div>
+<h4>Contacto</h4>
+<a href="https://wa.me/50767476568?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20mi%20u%C3%B1a%20encarnada." rel="noopener" target="_blank"><svg fill="currentColor" viewbox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"></path></svg> WhatsApp: 6747-6568</a>
+<span><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"></path></svg> Tel: 6747-6568 / 6739-3928</span>
+</div>
+</div>
+<div class="foot__bot">© 2026 Pies Saludables PTY · Clínica de quiropedia · Ciudad de Panamá</div>
+</div>
+</footer>
+<!-- STICKY MOBILE CTA -->
+<div class="stick">
+<a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20tengo%20una%20u%C3%B1a%20encarnada%20que%20me%20duele%20y%20quiero%20agendar%20una%20valoraci%C3%B3n." rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"></path></svg>
+    Escribir por WhatsApp — agendar mi valoración
+  </a>
+</div>
+<script>
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
