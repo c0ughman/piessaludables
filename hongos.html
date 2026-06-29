@@ -1,4 +1,4 @@
-<!-- Design system: primary deep clinical teal #0F3D33; single CTA accent = WhatsApp green #25D366 (most eye-grabbing, CTAs only); neutrals #F6FAF7/#FFFFFF/#1C2B22. Fonts: Fraunces (warm, trustworthy display) + Mulish (clean clinical body). Conversion-first SITE for Pies Saludables — focus: hongos en las uñas (onicomicosis). ONE action: WhatsApp. -->
+<!-- Design system: primary deep clinical wine red #951D12; single CTA accent = WhatsApp green #25D366 (most eye-grabbing, CTAs only); neutrals #FAF7F2/#FFFFFF/#1A1413. Fonts: Fraunces (warm, trustworthy display) + Mulish (clean clinical body). Conversion-first SITE for Pies Saludables — focus: hongos en las uñas (onicomicosis). ONE action: WhatsApp. -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,24 +11,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --primary:#0F3D33;      /* structural brand */
-  --primary-2:#13564A;    /* gradient partner */
-  --primary-d:#0A2A24;    /* footer / darkest */
-  --accent:#25D366;       /* the ONE CTA accent — WhatsApp only */
-  --accent-d:#1EBE5A;
-  --accent-soft:#7BE6A0;  /* light highlight on dark */
-  --ink:#1C2B22;
-  --mut:#5C6B63;
-  --bg:#F6FAF7;
+  --primary:#951D12;      /* structural brand */
+  --primary-2:#B23A2A;    /* gradient partner */
+  --primary-d:#5E0C05;    /* footer / darkest */
+  --accent:#25D366;       /* WhatsApp green — CTA only */
+  --accent-d:#1EBE5A;     /* WhatsApp green hover */
+  --accent-soft:#F6C543;  /* yellow — secondary accent */
+  --ink:#1A1413;
+  --mut:#5A5350;
+  --bg:#FAF7F2;
   --card:#FFFFFF;
-  --line:#E3ECE6;
-  --on-primary:#D9EBE4;
-  --on-primary-soft:#CFE6DC;
-  --chip:#E7F6EB;
+  --line:#ECE6DC;
+  --on-primary:#F6F0E5;
+  --on-primary-soft:#F4ECDE;
+  --chip:#FBF4E8;
   --gold:#F2B705;
-  --warn-bg:#FFF4F2;
-  --warn:#B23B30;
-  --foot-mut:#9EBFB4;
+  --warn-bg:#FFFDF8;
+  --warn:#951D12;
+  --foot-mut:#9A8F8C;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -38,7 +38,7 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 24px}
 .sec{padding:80px 0}
-.eyebrow{font-family:'Mulish';font-weight:800;letter-spacing:.13em;text-transform:uppercase;font-size:.77rem;color:var(--accent-d)}
+.eyebrow{font-family:'Mulish';font-weight:800;letter-spacing:.13em;text-transform:uppercase;font-size:.77rem;color:var(--accent-soft)}
 .shead{max-width:680px;margin:0 auto 46px;text-align:center}
 .shead h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-top:10px}
 .shead p{color:var(--mut);font-size:1.1rem;margin-top:14px}
@@ -50,42 +50,56 @@ a{color:inherit;text-decoration:none}
 
 /* Header (static) with anchor nav */
 .head{background:var(--bg);border-bottom:1px solid var(--line)}
-.head__in{display:flex;align-items:center;gap:18px;padding:14px 24px;max-width:1140px;margin:0 auto}
-.brand img{height:48px;width:auto}
+.head__in{display:flex;align-items:center;gap:18px;padding:9px 24px;max-width:1140px;margin:0 auto}
+.brand img{height:42px;width:auto}
+.head__in .brand img{filter:brightness(0) saturate(100%) invert(13%) sepia(89%) saturate(3800%) hue-rotate(355deg) brightness(95%) contrast(98%)}
 .nav{display:flex;gap:24px;margin-left:auto}
 .nav a{font-weight:700;font-size:.95rem;color:var(--ink);transition:color .15s}
-.nav a:hover{color:var(--accent-d)}
+.nav a:hover{color:var(--primary)}
 .head .wa{min-height:46px;padding:11px 20px;font-size:.95rem}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;margin-left:auto}
 .burger span{width:25px;height:3px;background:var(--primary);border-radius:3px}
 
 /* Hero */
-.hero{position:relative;background:linear-gradient(150deg,var(--primary) 0%,var(--primary-2) 100%);color:#fff;overflow:hidden}
+.hero{position:relative;background:linear-gradient(165deg,#FFFFFF 0%,#FAF7F2 60%,#FBF3E6 100%);color:var(--ink);overflow:hidden;border-bottom:1px solid var(--line)}
 .hero__grid{display:grid;grid-template-columns:1.07fr .93fr;gap:50px;align-items:center;padding:80px 0}
-.hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-.01em}
-.hero h1 em{font-style:normal;color:var(--accent-soft)}
-.hero__sub{margin:20px 0 28px;font-size:1.17rem;color:var(--on-primary);max-width:31em}
+.hero h1{color:var(--primary);font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--primary)}
+.hero__eyebrow{display:block;margin-top:18px}
+.hero__sub{margin:10px 0 28px;font-size:1.17rem;color:var(--mut);max-width:31em}
 .hero__pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
-.pill{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 14px;font-size:.85rem;font-weight:700;color:var(--on-primary)}
-.pill svg{width:16px;height:16px;color:var(--accent-soft)}
+.pill{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.85rem;font-weight:700;color:var(--ink)}
+.pill svg{width:16px;height:16px;color:var(--primary)}
 .hero__media{position:relative}
-.hero__media img{border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.34);width:100%;height:450px;object-fit:cover}
-.hero__badge{position:absolute;left:-16px;bottom:24px;background:var(--card);color:var(--primary);border-radius:14px;padding:14px 18px;box-shadow:0 12px 34px rgba(15,61,51,.2);max-width:224px}
-.hero__badge b{font-family:'Fraunces';font-size:1rem;color:var(--accent-d);display:block}
+.hero__shot{position:relative}
+.hero__media img{border-radius:18px;box-shadow:0 30px 70px rgba(26,20,19,.18);width:100%;height:400px;object-fit:cover}
+.hero__badge{position:absolute;left:-16px;bottom:24px;background:var(--card);color:var(--primary);border-radius:14px;padding:14px 18px;box-shadow:0 12px 34px rgba(26,20,19,.2);max-width:224px;border:1px solid var(--line)}
+.hero__badge b{font-family:'Fraunces';font-size:1rem;color:var(--primary);display:block}
 .hero__badge small{color:var(--mut);font-weight:600}
+/* Hero rating pill */
+.hero__rating{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:4px 13px;border-radius:40px}
+.hero__stars{color:#F2B705;letter-spacing:1.5px;font-size:.85rem;line-height:1}
+.hero__rating b{font-weight:800;font-size:.75rem;color:var(--ink)}
+.hero__rating b span{color:var(--mut);font-weight:600}
+/* Hero mini reviews (under the image) */
+.hero__reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.hero__rev{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 13px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm,0 4px 18px rgba(26,20,19,.08))}
+.hero__rev .hero__stars{font-size:.72rem;letter-spacing:1px;display:block;margin-bottom:6px}
+.hero__rev p{color:var(--mut);font-size:.78rem;line-height:1.45;margin-bottom:8px;flex:1}
+.hero__rev cite{font-style:normal;font-weight:800;font-size:.72rem;color:var(--primary)}
 
 /* Trust strip */
 .strip{background:var(--card);border-bottom:1px solid var(--line)}
 .strip__in{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:32px 0}
 .strip__it{text-align:center}
-.strip__ic{width:38px;height:38px;margin:0 auto;color:var(--accent-d)}
+.strip__ic{width:38px;height:38px;margin:0 auto;color:var(--primary)}
 .strip__it b{font-family:'Fraunces';font-size:1.02rem;color:var(--primary);display:block;margin-top:6px}
 .strip__it small{color:var(--mut);font-weight:600;font-size:.85rem}
 
 /* Problem */
 .prob{background:var(--card)}
 .prob__grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.prob img{border-radius:18px;height:400px;width:100%;object-fit:cover;box-shadow:0 12px 34px rgba(15,61,51,.14)}
+.prob img{border-radius:18px;height:400px;width:100%;object-fit:cover;box-shadow:0 12px 34px rgba(26,20,19,.14)}
 .prob h2{font-size:clamp(1.8rem,3.4vw,2.4rem);max-width:14em}
 .prob__lead{color:var(--mut);font-size:1.1rem;margin:14px 0 24px}
 .prob__list li{list-style:none;display:flex;gap:11px;align-items:flex-start;font-weight:600;color:var(--ink);margin-bottom:12px}
@@ -95,11 +109,11 @@ a{color:inherit;text-decoration:none}
 /* Services */
 .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .svc__c{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .2s,box-shadow .2s}
-.svc__c--lead{grid-column:span 2;background:linear-gradient(150deg,var(--primary),var(--primary-2));color:#fff;border:none}
-.svc__c--lead h3{color:#fff}.svc__c--lead p{color:var(--on-primary)}
-.svc__c:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(15,61,51,.12)}
-.svc__ic{width:48px;height:48px;border-radius:12px;background:var(--chip);color:var(--accent-d);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-.svc__c--lead .svc__ic{background:rgba(255,255,255,.14);color:var(--accent-soft)}
+.svc__c--lead{grid-column:span 2;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--primary)}
+.svc__c--lead h3{color:var(--primary)}.svc__c--lead p{color:var(--mut)}
+.svc__c:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(26,20,19,.12)}
+.svc__ic{width:48px;height:48px;border-radius:12px;background:var(--chip);color:var(--primary);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.svc__c--lead .svc__ic{background:var(--chip);color:var(--primary)}
 .svc__ic svg{width:26px;height:26px}
 .svc__c h3{font-size:1.2rem;margin-bottom:7px}
 .svc__c p{color:var(--mut);font-size:.98rem}
@@ -110,15 +124,15 @@ a{color:inherit;text-decoration:none}
 .how{background:var(--primary);color:#fff}
 .how .shead h2{color:#fff}.how .shead p{color:var(--on-primary-soft)}
 .how__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how__c{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:28px}
-.how__n{width:38px;height:38px;border-radius:10px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:700;font-size:1.15rem;margin-bottom:14px}
+.how__c{background:transparent;border:none;border-radius:16px;padding:28px 0}
+.how__n{font-family:'Fraunces';font-weight:700;font-size:2.2rem;line-height:1;color:var(--accent-soft);margin-bottom:14px}
 .how__c h3{color:#fff;font-size:1.16rem;margin-bottom:8px}
 .how__c p{color:var(--on-primary);font-size:.99rem}
 .how__cta{text-align:center;margin-top:38px}
 
 /* Testimonials */
 .tst{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:22px}
-.tst__c{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 4px 18px rgba(15,61,51,.07);display:flex;flex-direction:column}
+.tst__c{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 4px 18px rgba(26,20,19,.07);display:flex;flex-direction:column}
 .tst__c--feat{border:2px solid var(--accent-soft)}
 .stars{color:var(--gold);font-size:1.05rem;letter-spacing:2px;margin-bottom:13px}
 .tst__c p{font-size:1rem;color:var(--ink);flex:1}
@@ -135,17 +149,17 @@ a{color:inherit;text-decoration:none}
 
 /* Offer */
 .offer{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.offer__box{background:linear-gradient(150deg,var(--primary),var(--primary-2));color:#fff;border-radius:24px;padding:50px 40px;text-align:center;box-shadow:0 18px 50px rgba(15,61,51,.2)}
-.offer__box h2{color:#fff;font-size:clamp(1.8rem,3.6vw,2.5rem);max-width:18em;margin:0 auto 14px}
-.offer__box p{color:var(--on-primary);font-size:1.12rem;max-width:32em;margin:0 auto 26px}
-.offer__rr{margin-top:18px;color:var(--accent-soft);font-size:.95rem;font-weight:600}
+.offer__box{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--primary);color:var(--ink);border-radius:24px;padding:50px 40px;text-align:center;box-shadow:0 18px 50px rgba(26,20,19,.12)}
+.offer__box h2{color:var(--primary);font-size:clamp(1.8rem,3.6vw,2.5rem);max-width:18em;margin:0 auto 14px}
+.offer__box p{color:var(--mut);font-size:1.12rem;max-width:32em;margin:0 auto 26px}
+.offer__rr{margin-top:18px;color:var(--mut);font-size:.95rem;font-weight:600}
 
 /* FAQ */
 .faq__grid{max-width:760px;margin:0 auto}
 .faq__c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin-bottom:14px}
 .faq__c h3{font-size:1.15rem;margin-bottom:8px;color:var(--primary)}
 .faq__c p{color:var(--mut)}
-.faq__c a{color:var(--accent-d);font-weight:800}
+.faq__c a{color:var(--primary);font-weight:800}
 .faq__c a:hover{text-decoration:underline}
 
 /* Location */
@@ -154,15 +168,15 @@ a{color:inherit;text-decoration:none}
 .loc__c{border:1px solid var(--line);border-radius:18px;padding:28px;background:var(--card)}
 .loc__c h3{font-size:1.28rem;margin-bottom:10px}
 .loc__c .row{display:flex;gap:10px;align-items:flex-start;color:var(--mut);font-weight:600;margin-bottom:10px}
-.loc__c .row svg{width:19px;height:19px;color:var(--accent-d);flex-shrink:0;margin-top:3px}
+.loc__c .row svg{width:19px;height:19px;color:var(--primary);flex-shrink:0;margin-top:3px}
 .loc__c .wa{margin-top:8px;width:100%}
 
 /* Final */
-.final{background:linear-gradient(150deg,var(--accent),var(--accent-d));color:#fff;text-align:center}
+.final{background:linear-gradient(150deg,var(--primary),var(--primary-d));color:#fff;text-align:center}
 .final h2{color:#fff;font-size:clamp(1.9rem,4vw,2.7rem);max-width:16em;margin:0 auto 14px}
 .final p{color:#fff;opacity:.92;font-size:1.14rem;max-width:32em;margin:0 auto 28px}
-.final .wa{background:#fff;color:var(--accent-d);box-shadow:0 12px 30px rgba(0,0,0,.18)}
-.final .wa:hover{background:#fff;color:var(--accent-d)}
+.final .wa{background:var(--accent);color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.final .wa:hover{background:var(--accent-d);color:#fff}
 
 /* Footer */
 .foot{background:var(--primary-d);color:var(--on-primary-soft);padding:48px 0 28px}
@@ -177,15 +191,18 @@ a{color:inherit;text-decoration:none}
 .foot__bot{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;color:var(--foot-mut);font-size:.86rem}
 
 /* Sticky mobile CTA */
-.stick{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(246,250,247,.93);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px;display:none;box-shadow:0 -6px 20px rgba(15,61,51,.1)}
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(250,247,242,.93);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px;display:none;box-shadow:0 -6px 20px rgba(26,20,19,.1)}
 .stick .wa{width:100%;min-height:52px}
 
 .rev{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
 .rev.in{opacity:1;transform:none}
 
 @media(max-width:900px){
-  .hero__grid,.prob__grid{grid-template-columns:1fr;gap:34px}
+  .hero__grid,.prob__grid{grid-template-columns:1fr;gap:32px}
   .hero__media img,.prob img{height:340px}
+  .hero__media{display:contents}
+  .hero__shot{order:-1}
+  .hero__reviews{order:1;margin-top:0}
   .strip__in{grid-template-columns:1fr 1fr;gap:26px}
   .svc{grid-template-columns:1fr 1fr}.svc__c--lead{grid-column:span 2}
   .how__grid{grid-template-columns:1fr}
@@ -201,6 +218,7 @@ a{color:inherit;text-decoration:none}
   .stick{display:block}
   .svc,.strip__in,.foot__grid{grid-template-columns:1fr}.svc__c--lead{grid-column:span 1}
   .hero__media img{height:280px}.hero__badge{left:0;max-width:200px}
+  .hero__reviews{grid-template-columns:1fr}
   .offer__box{padding:36px 22px}
   .wa{width:100%}
 }
@@ -210,14 +228,14 @@ a{color:inherit;text-decoration:none}
 
 <header class="head">
   <div class="head__in">
-    <a class="brand" href="#inicio" aria-label="Pies Saludables PTY"><img src="https://piessaludables.com.pa/wp-content/uploads/2024/04/Logo-Pies-Saludables_v2.png" alt="Pies Saludables PTY"></a>
+    <a class="brand" href="#inicio" aria-label="Pies Saludables PTY"><img src="logo-green.png" alt="Pies Saludables PTY"></a>
     <nav class="nav" id="nav">
       <a href="#servicios">Tratamiento</a>
       <a href="#resultados">Resultados</a>
       <a href="#ubicacion">Sucursales</a>
     </nav>
     <a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20tengo%20hongos%20en%20las%20u%C3%B1as%20y%20quiero%20agendar%20una%20valoraci%C3%B3n." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"/></svg>
+      <svg class="ico-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.519 5.26l-.999 3.648 3.97-1.042zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
       Escribir por WhatsApp
     </a>
     <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
@@ -229,11 +247,12 @@ a{color:inherit;text-decoration:none}
   <div class="wrap">
     <div class="hero__grid">
       <div class="rev in">
-        <span class="eyebrow" style="color:var(--accent-soft)">Pies Saludables PTY · Clínica #1 de quiropedia en Panamá</span>
+        <div class="hero__rating"><span class="hero__stars">★★★★★</span><b>+1,250 <span>pacientes satisfechos</span></b></div>
         <h1>¿Uñas con hongos que <em>te dan pena</em>?</h1>
+        <span class="eyebrow hero__eyebrow" style="color:var(--accent-soft)">Clínica N°1 de Quiropedia en Panamá</span>
         <p class="hero__sub">Tratamos la onicomicosis de raíz —no con cremas que no sirven— para que recuperes uñas limpias y vuelvas a usar sandalias sin esconder los pies. Con esterilización total por ozono.</p>
         <a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20tengo%20hongos%20en%20las%20u%C3%B1as%20y%20quiero%20agendar%20una%20valoraci%C3%B3n." target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"/></svg>
+          <svg class="ico-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.519 5.26l-.999 3.648 3.97-1.042zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
           Mandar foto y agendar
         </a>
         <div class="hero__pills">
@@ -242,8 +261,27 @@ a{color:inherit;text-decoration:none}
         </div>
       </div>
       <div class="hero__media rev in">
-        <img src="https://piessaludables.com.pa/wp-content/uploads/2024/05/professional-medical-pedicure-procedure-while-doct-2023-11-27-04-57-44-utc-Mediana-1024x683.jpg" alt="Tratamiento clínico de hongos en las uñas en Pies Saludables PTY">
-        <div class="hero__badge"><b>Uñas restauradas</b><small>Seguimiento hasta que tu uña vuelve a verse sana</small></div>
+        <div class="hero__shot">
+          <img src="https://piessaludables.com.pa/wp-content/uploads/2024/04/pies-sanos-scaled-2-1024x682.jpg" alt="Uñas sanas y restauradas tras el tratamiento de hongos en Pies Saludables PTY">
+          <div class="hero__badge"><b>Uñas restauradas</b><small>Seguimiento hasta que tu uña vuelve a verse sana</small></div>
+        </div>
+        <div class="hero__reviews">
+          <div class="hero__rev">
+            <span class="hero__stars">★★★★★</span>
+            <p>"Tengo unos 6 meses en tratamiento, mis uñas se ven bien."</p>
+            <cite>Marisol H. · Cliente</cite>
+          </div>
+          <div class="hero__rev">
+            <span class="hero__stars">★★★★★</span>
+            <p>"Ahora gozo de una nueva y buena calidad de vida en mis pies."</p>
+            <cite>Josefina Á. · Cliente</cite>
+          </div>
+          <div class="hero__rev">
+            <span class="hero__stars">★★★★★</span>
+            <p>"Ya no siento la incomodidad ni dolor y me han dado de alta."</p>
+            <cite>José L. · Cliente</cite>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -308,7 +346,7 @@ a{color:inherit;text-decoration:none}
       <div class="how__c rev"><div class="how__n">3</div><h3>Seguimiento hasta el alta</h3><p>Controlamos cómo crece tu uña nueva hasta que se ve sana y restaurada. Te damos de alta cuando el problema está resuelto.</p></div>
     </div>
     <div class="how__cta rev"><a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20quiero%20una%20valoraci%C3%B3n%20para%20mis%20u%C3%B1as%20con%20hongos." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"/></svg>
+      <svg class="ico-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.519 5.26l-.999 3.648 3.97-1.042zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
       Empezar mi tratamiento</a></div>
   </div>
 </section>
@@ -320,18 +358,18 @@ a{color:inherit;text-decoration:none}
     <div class="tst">
       <div class="tst__c tst__c--feat rev">
         <div class="stars">★★★★★</div>
-        <p>"Mis uñas no se veían bien, me había contagiado de hongos y no usaba sandalias por pena. Llevo unos 6 meses en tratamiento y mis uñas se ven bien. Sigo yendo a Pies Saludables porque me agrada su profesionalismo y los masajes que recibo en mis pies."</p>
-        <div class="tst__by"><div class="tst__av">MH</div><div><b>Marisol Hernández</b><small>Paciente de hongos · Reseña de Google</small></div></div>
+        <p>"Mis uñas no se veían bien, me había contagiado de hongos, no usaba sandalias por inhibición, tengo unos 6 meses en tratamiento, mis uñas se ven bien, sigo yendo a Pies Saludables porque me gusta aunque mis uñas están restauradas completamente. Ahora me cuido yendo a Pies Saludables donde asisto porque me agrada su profesionalismo y masajes que recibo en mis pies."</p>
+        <div class="tst__by"><div class="tst__av">MH</div><div><b>Marisol Hernández</b><small>Cliente</small></div></div>
       </div>
       <div class="tst__c rev">
         <div class="stars">★★★★★</div>
-        <p>"Creía que lo mío no tenía solución. Me recomendaron Pies Saludables y no pensé que iba a sanar tan rápido. Ahora gozo de una buena calidad de vida en mis pies."</p>
-        <div class="tst__by"><div class="tst__av">JÁ</div><div><b>Josefina Álvarez</b><small>Reseña de Google</small></div></div>
+        <p>"Creía que lo mío no tenía solución, sentía escozor en mis pies y me salieron unas ampollitas que me picaban y me dolían. Me recomendaron la Clínica Pies Saludables, no pensé que me iba a sanar tan rápido, ya que tenía mucho tiempo con el problema. Ahora gozo de una nueva y buena calidad de vida en mis pies. No dejaré de ir a Pies Saludables para mi pedicura Clínico."</p>
+        <div class="tst__by"><div class="tst__av">JÁ</div><div><b>Josefina Álvarez</b><small>Cliente</small></div></div>
       </div>
       <div class="tst__c rev">
         <div class="stars">★★★★★</div>
-        <p>"Me diagnosticaron bien, llevé mi seguimiento y después de unos meses me dieron de alta sin dolor. Totalmente recomendados."</p>
-        <div class="tst__by"><div class="tst__av">JL</div><div><b>José Lartiga</b><small>Reseña de Google</small></div></div>
+        <p>"Sufría mucho con mis uñas encarnadas, conocí Pies Saludables y me diagnosticaron que la causa era por mal recorte. Me realizaron el recorte adecuado el cual desde el principio me sentía cómodo, llevé mi seguimiento de control, después de nueve meses ya no siento la incomodidad ni dolor y me han dado de alta. Recomendados."</p>
+        <div class="tst__by"><div class="tst__av">JL</div><div><b>José Lartiga</b><small>Cliente</small></div></div>
       </div>
     </div>
   </div>
@@ -356,7 +394,7 @@ a{color:inherit;text-decoration:none}
       <h2>Mándanos una foto de tus uñas y te decimos qué tienes</h2>
       <p>Sin salir de casa: envíanos una foto por WhatsApp. Te decimos si es hongo, qué tan avanzado está y cómo lo tratamos — antes de que decidas nada.</p>
       <a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20les%20mando%20una%20foto%20de%20mis%20u%C3%B1as%20con%20hongos%20para%20que%20me%20digan%20qu%C3%A9%20tengo%20y%20c%C3%B3mo%20tratarlo." target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"/></svg>
+        <svg class="ico-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.519 5.26l-.999 3.648 3.97-1.042zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
         Enviar foto por WhatsApp
       </a>
       <div class="offer__rr">Sin compromiso · Respondemos el mismo día · Lun a Dom 9am–7pm</div>
@@ -394,7 +432,7 @@ a{color:inherit;text-decoration:none}
         <a class="wa" href="https://wa.me/50767393928?text=Hola%2C%20quiero%20agendar%20por%20hongos%20en%20la%20sucursal%20de%20Juan%20D%C3%ADaz." target="_blank" rel="noopener">Agendar en Juan Díaz</a>
       </div>
     </div>
-    <div style="text-align:center;margin-top:24px" class="rev"><a href="https://www.google.com/maps/search/?api=1&query=Pies+Saludables+PTY+Panama" target="_blank" rel="noopener" style="color:var(--accent-d);font-weight:800">Ver en Google Maps →</a></div>
+    <div style="text-align:center;margin-top:24px" class="rev"><a href="https://www.google.com/maps/search/?api=1&query=Pies+Saludables+PTY+Panama" target="_blank" rel="noopener" style="color:var(--primary);font-weight:800">Ver en Google Maps →</a></div>
   </div>
 </section>
 
@@ -404,7 +442,7 @@ a{color:inherit;text-decoration:none}
     <h2>Vuelve a usar sandalias sin pena</h2>
     <p>Un mensaje y una foto bastan para empezar. Te respondemos hoy.</p>
     <a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20quiero%20tratar%20mis%20u%C3%B1as%20con%20hongos.%20%C2%BFCu%C3%A1ndo%20pueden%20atenderme%3F" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"/></svg>
+      <svg class="ico-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.519 5.26l-.999 3.648 3.97-1.042zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
       Escribir por WhatsApp
     </a>
   </div>
@@ -414,7 +452,7 @@ a{color:inherit;text-decoration:none}
   <div class="wrap">
     <div class="foot__grid">
       <div class="foot__brand">
-        <img src="https://piessaludables.com.pa/wp-content/uploads/2024/04/Logo-Pies-Saludables_v2.png" alt="Pies Saludables PTY">
+        <img src="logo-white.png" alt="Pies Saludables PTY">
         <p>Clínica #1 de quiropedia en Panamá. Tratamiento clínico de hongos en las uñas con esterilización total por ozono.</p>
         <p class="foot__also">También: uñas encarnadas · callos · verrugas plantares · atención al diabético.</p>
       </div>
@@ -426,7 +464,7 @@ a{color:inherit;text-decoration:none}
       </div>
       <div>
         <h4>Contacto</h4>
-        <a href="https://wa.me/50767476568?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20tratamiento%20de%20hongos." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z"/></svg> WhatsApp: 6747-6568</a>
+        <a href="https://wa.me/50767476568?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20tratamiento%20de%20hongos." target="_blank" rel="noopener"><svg class="ico-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.519 5.26l-.999 3.648 3.97-1.042zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg> WhatsApp: 6747-6568</a>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> Tel: 6747-6568 / 6739-3928</span>
       </div>
     </div>
@@ -436,7 +474,7 @@ a{color:inherit;text-decoration:none}
 
 <div class="stick">
   <a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20tengo%20hongos%20en%20las%20u%C3%B1as%20y%20quiero%20agendar%20una%20valoraci%C3%B3n." target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 01-5.6-4.9c-.4-.7-.7-1.5-.7-2.3 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 2 2 .3.2.5.1.6 0l.5-.6c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.1 1.5z"/></svg>
+    <svg class="ico-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.519 5.26l-.999 3.648 3.97-1.042zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     Mandar foto de mis uñas por WhatsApp
   </a>
 </div>
