@@ -20,7 +20,7 @@
   --shadow:0 10px 40px rgba(26,20,19,.12);--shadow-sm:0 4px 18px rgba(26,20,19,.08);
 }
 html{scroll-behavior:smooth}
-body{font-family:'Mulish',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:76px}
+body{font-family:'Mulish',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.13;font-weight:600;color:var(--teal)}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
@@ -71,9 +71,11 @@ a{color:inherit;text-decoration:none}
 
 /* Pain */
 .pain{background:var(--card);border-bottom:1px solid var(--line)}
+.pain__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.pain__img{border-radius:18px;width:100%;height:100%;min-height:380px;object-fit:cover;box-shadow:0 12px 34px rgba(26,20,19,.14)}
 .pain h2{font-size:clamp(1.7rem,3.4vw,2.4rem);max-width:16em}
 .pain__lead{color:var(--mut);font-size:1.12rem;margin:14px 0 30px;max-width:34em}
-.pain__list{display:grid;grid-template-columns:1fr 1fr;gap:14px 30px;max-width:760px}
+.pain__list{display:grid;grid-template-columns:1fr;gap:14px 30px;max-width:760px}
 .pain__list li{list-style:none;display:flex;gap:11px;align-items:flex-start;font-weight:600;color:var(--ink)}
 .pain__list svg{width:22px;height:22px;color:#951D12;flex-shrink:0;margin-top:3px}
 .pain__warn{margin-top:28px;background:#FFFDF8;border-left:4px solid #951D12;border-radius:10px;padding:16px 20px;color:#5E0C05;font-weight:600;max-width:600px}
@@ -146,7 +148,8 @@ a{color:inherit;text-decoration:none}
 .rev.in{opacity:1;transform:none}
 
 @media(max-width:880px){
-  .hero__grid,.proof__grid{grid-template-columns:1fr;gap:32px}
+  .hero__grid,.proof__grid,.pain__grid{grid-template-columns:1fr;gap:32px}
+  .pain__img{min-height:0;height:300px}
   .hero__media img{height:340px}
   .hero__media{display:contents}
   .hero__shot{order:-1}
@@ -227,6 +230,8 @@ a{color:inherit;text-decoration:none}
 <!-- PAIN / COST OF WAITING -->
 <section class="pain sec">
 <div class="wrap rev">
+<div class="pain__grid">
+<div>
 <span class="eyebrow" style="color:#951D12">Si llevas días así, lee esto</span>
 <h2>Cada día con la uña encarnada, el dolor —y el riesgo— crecen</h2>
 <p class="pain__lead">No es "algo que se pasa solo". Una onicocriptosis mal tratada se inflama, se infecta y termina necesitando un procedimiento más grande. ¿Te suena alguno de estos?</p>
@@ -234,11 +239,14 @@ a{color:inherit;text-decoration:none}
 <li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> Te duele al caminar y al ponerte zapatos cerrados.</li>
 <li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> Intentaste cortarla en casa y empeoró.</li>
 <li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> El dedo está rojo, hinchado o supura.</li>
-<li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> Te da pena enseñar el pie en sandalias.</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> Prefieres no usar sandalias por cómo se ve.</li>
 <li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> Tienes miedo de que te tengan que operar.</li>
 <li><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg> Ya vuelve por segunda o tercera vez.</li>
 </ul>
 <div class="pain__warn">Mientras más esperas, más se inflama y más se complica el tratamiento. Atacarla a tiempo es rápido, seguro y mucho más cómodo.</div>
+</div>
+<img alt="Atención clínica profesional del pie en Pies Saludables PTY" class="pain__img" src="https://piessaludables.com.pa/wp-content/uploads/2024/05/professional-medical-pedicure-procedure-while-doct-2023-11-27-04-57-44-utc-Mediana-1024x683.jpg"/>
+</div>
 </div>
 </section>
 <!-- SOLUTION / MECHANISM -->

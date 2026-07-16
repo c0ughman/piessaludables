@@ -32,7 +32,7 @@
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Mulish',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:76px}
+body{font-family:'Mulish',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.13;font-weight:600;color:var(--primary)}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
@@ -130,13 +130,14 @@ a{color:inherit;text-decoration:none}
 .how__c p{color:var(--on-primary);font-size:.99rem}
 .how__cta{text-align:center;margin-top:38px}
 
-/* Testimonials */
-.tst{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:22px}
+/* Testimonials — featured review centered on top, two supporting below */
+.tst{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .tst__c{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 4px 18px rgba(26,20,19,.07);display:flex;flex-direction:column}
-.tst__c--feat{border:2px solid var(--accent-soft)}
+.tst__c--feat{grid-column:1/-1;max-width:720px;margin:0 auto;text-align:center;padding:36px 40px;box-shadow:0 14px 40px rgba(26,20,19,.12)}
+.tst__c--feat .tst__by{justify-content:center}
 .stars{color:var(--gold);font-size:1.05rem;letter-spacing:2px;margin-bottom:13px}
 .tst__c p{font-size:1rem;color:var(--ink);flex:1}
-.tst__c--feat p{font-family:'Fraunces';font-size:1.16rem;line-height:1.45;font-weight:500}
+.tst__c--feat p{font-family:'Fraunces';font-size:1.2rem;line-height:1.5;font-weight:500}
 .tst__by{margin-top:18px;display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:15px}
 .tst__av{width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:600}
 .tst__by b{font-weight:800;color:var(--primary);font-family:'Mulish'}
@@ -248,7 +249,7 @@ a{color:inherit;text-decoration:none}
     <div class="hero__grid">
       <div class="rev in">
         <div class="hero__rating"><span class="hero__stars">★★★★★</span><b>+1,250 <span>pacientes satisfechos</span></b></div>
-        <h1>¿Uñas con hongos que <em>te dan pena</em>?</h1>
+        <h1>¿Hongos en las uñas que <em>no se quitan con nada</em>?</h1>
         <span class="eyebrow hero__eyebrow" style="color:var(--accent-soft)">Clínica N°1 de Quiropedia en Panamá</span>
         <p class="hero__sub">Tratamos la onicomicosis de raíz —no con cremas que no sirven— para que recuperes uñas limpias y vuelvas a usar sandalias sin esconder los pies. Con esterilización total por ozono.</p>
         <a class="wa" href="https://wa.me/50767476568?text=Hola%2C%20tengo%20hongos%20en%20las%20u%C3%B1as%20y%20quiero%20agendar%20una%20valoraci%C3%B3n." target="_blank" rel="noopener">
@@ -300,14 +301,14 @@ a{color:inherit;text-decoration:none}
 <!-- PROBLEM -->
 <section class="prob sec">
   <div class="wrap"><div class="prob__grid">
-    <img class="rev" src="https://piessaludables.com.pa/wp-content/uploads/2024/04/pies-sanos-scaled-2-1024x682.jpg" alt="Uñas sanas después del tratamiento de hongos">
+    <img class="rev" src="https://piessaludables.com.pa/wp-content/uploads/2024/04/Cuidado-pies-744x465-1.jpg" alt="Cuidado clínico profesional de las uñas del pie">
     <div class="rev">
       <span class="eyebrow" style="color:var(--warn)">Si lo dejas pasar, se extiende</span>
       <h2>El hongo no se va con cremas — y mientras tanto avanza</h2>
       <p class="prob__lead">La onicomicosis se mete bajo la uña: por eso los esmaltes y cremas no llegan a la raíz. Cada mes que pasa, la uña se pone más amarilla, gruesa y quebradiza, y puede contagiar a las demás uñas y a tu familia.</p>
       <ul class="prob__list">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg> Uñas amarillas, gruesas o quebradizas.</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg> Te da pena usar sandalias o que te vean los pies.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg> Prefieres no usar sandalias por cómo se ven tus uñas.</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg> Ya probaste cremas y esmaltes y no funcionó.</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg> Tienes miedo de contagiar a tu familia.</li>
       </ul>
